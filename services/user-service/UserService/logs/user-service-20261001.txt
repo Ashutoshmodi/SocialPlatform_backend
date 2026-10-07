@@ -1,0 +1,15 @@
+2026-10-01 20:23:38.265 -04:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2026-10-01 20:28:59.949 -04:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2026-10-01 20:35:18.730 -04:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2026-10-01 20:35:19.024 -04:00 [DBG] Entity Framework Core 8.0.11 initialized 'UserDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:8.0.11+52a6b9f2ddd23fcabd1c673b4a2e273495129481' with options: None
+2026-10-01 20:35:19.310 -04:00 [DBG] 'UserDbContext' disposed.
+2026-10-01 20:35:31.146 -04:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2026-10-01 20:35:31.405 -04:00 [DBG] Entity Framework Core 8.0.11 initialized 'UserDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:8.0.11+52a6b9f2ddd23fcabd1c673b4a2e273495129481' with options: None
+2026-10-01 20:35:31.429 -04:00 [DBG] Creating DbConnection.
+2026-10-01 20:35:31.452 -04:00 [DBG] Created DbConnection. (21ms).
+2026-10-01 20:35:31.458 -04:00 [DBG] Opening connection to database 'users' on server 'tcp://localhost:5432'.
+2026-10-01 20:35:31.465 -04:00 [DBG] Opening connection to database 'users' on server 'tcp://localhost:5432'.
+2026-10-01 20:35:35.564 -04:00 [DBG] An error occurred using the connection to database 'users' on server 'tcp://localhost:5432'.
+2026-10-01 20:35:35.584 -04:00 [DBG] 'UserDbContext' disposed.
+2026-10-01 20:35:35.591 -04:00 [DBG] Disposing connection to database 'users' on server 'tcp://localhost:5432'.
+2026-10-01 20:35:35.596 -04:00 [DBG] Disposed connection to database 'users' on server 'tcp://localhost:5432' (3ms).

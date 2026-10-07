@@ -1,0 +1,923 @@
+2026-10-07 17:12:36.355 -04:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2026-10-07 17:12:36.840 -04:00 [DBG] Entity Framework Core 8.0.11 initialized 'PostDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:8.0.11+52a6b9f2ddd23fcabd1c673b4a2e273495129481' with options: None
+2026-10-07 17:12:36.852 -04:00 [DBG] Creating DbConnection.
+2026-10-07 17:12:36.896 -04:00 [DBG] Created DbConnection. (40ms).
+2026-10-07 17:12:36.903 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:36.907 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.016 -04:00 [DBG] Opened connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.020 -04:00 [DBG] Closing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.028 -04:00 [DBG] Closed connection to database 'posts' on server 'tcp://localhost:5432' (5ms).
+2026-10-07 17:12:37.039 -04:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2026-10-07 17:12:37.045 -04:00 [DBG] Created DbCommand for 'ExecuteScalar' (6ms).
+2026-10-07 17:12:37.047 -04:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (11ms).
+2026-10-07 17:12:37.050 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.073 -04:00 [DBG] Opened connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.082 -04:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2026-10-07 17:12:37.143 -04:00 [INF] Executed DbCommand (59ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2026-10-07 17:12:37.146 -04:00 [DBG] Closing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.149 -04:00 [DBG] Closed connection to database 'posts' on server 'tcp://localhost:5432' (2ms).
+2026-10-07 17:12:37.160 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.162 -04:00 [DBG] Opened connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.163 -04:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2026-10-07 17:12:37.164 -04:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2026-10-07 17:12:37.166 -04:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2026-10-07 17:12:37.168 -04:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2026-10-07 17:12:37.174 -04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2026-10-07 17:12:37.180 -04:00 [DBG] Closing data reader to 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.183 -04:00 [DBG] A data reader for 'posts' on server 'tcp://localhost:5432' is being disposed after spending 6ms reading results.
+2026-10-07 17:12:37.185 -04:00 [DBG] Closing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.186 -04:00 [DBG] Closed connection to database 'posts' on server 'tcp://localhost:5432' (1ms).
+2026-10-07 17:12:37.189 -04:00 [DBG] Migrating using database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.190 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.192 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.200 -04:00 [DBG] Opened connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.202 -04:00 [DBG] Closing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.203 -04:00 [DBG] Closed connection to database 'posts' on server 'tcp://localhost:5432' (1ms).
+2026-10-07 17:12:37.205 -04:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2026-10-07 17:12:37.206 -04:00 [DBG] Created DbCommand for 'ExecuteScalar' (1ms).
+2026-10-07 17:12:37.207 -04:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (2ms).
+2026-10-07 17:12:37.208 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.209 -04:00 [DBG] Opened connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.211 -04:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2026-10-07 17:12:37.214 -04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2026-10-07 17:12:37.216 -04:00 [DBG] Closing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.218 -04:00 [DBG] Closed connection to database 'posts' on server 'tcp://localhost:5432' (1ms).
+2026-10-07 17:12:37.220 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.221 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.229 -04:00 [DBG] Opened connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.230 -04:00 [DBG] Closing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.233 -04:00 [DBG] Closed connection to database 'posts' on server 'tcp://localhost:5432' (2ms).
+2026-10-07 17:12:37.235 -04:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2026-10-07 17:12:37.236 -04:00 [DBG] Created DbCommand for 'ExecuteScalar' (1ms).
+2026-10-07 17:12:37.238 -04:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (2ms).
+2026-10-07 17:12:37.239 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.240 -04:00 [DBG] Opened connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.242 -04:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2026-10-07 17:12:37.246 -04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2026-10-07 17:12:37.248 -04:00 [DBG] Closing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.250 -04:00 [DBG] Closed connection to database 'posts' on server 'tcp://localhost:5432' (1ms).
+2026-10-07 17:12:37.252 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.253 -04:00 [DBG] Opened connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.254 -04:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2026-10-07 17:12:37.255 -04:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2026-10-07 17:12:37.256 -04:00 [DBG] Initialized DbCommand for 'ExecuteReader' (2ms).
+2026-10-07 17:12:37.258 -04:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2026-10-07 17:12:37.262 -04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2026-10-07 17:12:37.264 -04:00 [DBG] Closing data reader to 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.267 -04:00 [DBG] A data reader for 'posts' on server 'tcp://localhost:5432' is being disposed after spending 2ms reading results.
+2026-10-07 17:12:37.269 -04:00 [DBG] Closing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.270 -04:00 [DBG] Closed connection to database 'posts' on server 'tcp://localhost:5432' (1ms).
+2026-10-07 17:12:37.282 -04:00 [INF] No migrations were applied. The database is already up to date.
+2026-10-07 17:12:37.284 -04:00 [INF] Database migrations applied
+2026-10-07 17:12:37.287 -04:00 [DBG] 'PostDbContext' disposed.
+2026-10-07 17:12:37.290 -04:00 [DBG] Disposing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:12:37.292 -04:00 [DBG] Disposed connection to database 'posts' on server 'tcp://localhost:5432' (1ms).
+2026-10-07 17:12:37.335 -04:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2026-10-07 17:12:37.384 -04:00 [DBG] Hosting starting
+2026-10-07 17:12:37.404 -04:00 [INF] User profile is available. Using 'C:\Users\ashut\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-07 17:12:37.410 -04:00 [DBG] Reading data from file 'C:\Users\ashut\AppData\Local\ASP.NET\DataProtection-Keys\key-1aefe2f7-a78f-402e-8cca-a7efaaf710db.xml'.
+2026-10-07 17:12:37.415 -04:00 [DBG] Reading data from file 'C:\Users\ashut\AppData\Local\ASP.NET\DataProtection-Keys\key-5f7358ee-6761-44e0-a4ec-3ff3e2cb93b3.xml'.
+2026-10-07 17:12:37.417 -04:00 [DBG] Reading data from file 'C:\Users\ashut\AppData\Local\ASP.NET\DataProtection-Keys\key-f49fc337-19c9-4efe-9e8d-e9196b0d62ea.xml'.
+2026-10-07 17:12:37.422 -04:00 [DBG] Found key {1aefe2f7-a78f-402e-8cca-a7efaaf710db}.
+2026-10-07 17:12:37.425 -04:00 [DBG] Found key {5f7358ee-6761-44e0-a4ec-3ff3e2cb93b3}.
+2026-10-07 17:12:37.426 -04:00 [DBG] Found key {f49fc337-19c9-4efe-9e8d-e9196b0d62ea}.
+2026-10-07 17:12:37.430 -04:00 [DBG] Considering key {1aefe2f7-a78f-402e-8cca-a7efaaf710db} with expiration date 2026-12-31 15:29:51Z as default key.
+2026-10-07 17:12:37.434 -04:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2026-10-07 17:12:37.435 -04:00 [DBG] Decrypting secret element using Windows DPAPI.
+2026-10-07 17:12:37.437 -04:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2026-10-07 17:12:37.439 -04:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2026-10-07 17:12:37.441 -04:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2026-10-07 17:12:37.443 -04:00 [DBG] Using key {1aefe2f7-a78f-402e-8cca-a7efaaf710db} as the default key.
+2026-10-07 17:12:37.444 -04:00 [DBG] Key ring with default key {1aefe2f7-a78f-402e-8cca-a7efaaf710db} was loaded during application startup.
+2026-10-07 17:12:37.512 -04:00 [INF] Now listening on: http://localhost:5002
+2026-10-07 17:12:37.514 -04:00 [DBG] Loaded hosting startup assembly PostService
+2026-10-07 17:12:37.515 -04:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2026-10-07 17:12:37.516 -04:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2026-10-07 17:12:37.517 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-07 17:12:37.517 -04:00 [INF] Hosting environment: Development
+2026-10-07 17:12:37.518 -04:00 [INF] Content root path: C:\Users\ashut\source\repos\SocialPlatform\backend\services\post-service\PostService
+2026-10-07 17:12:37.519 -04:00 [DBG] Hosting started
+2026-10-07 17:12:37.680 -04:00 [DBG] Connection id "0HNP4MURF33C3" accepted.
+2026-10-07 17:12:37.682 -04:00 [DBG] Connection id "0HNP4MURF33C3" started.
+2026-10-07 17:12:37.689 -04:00 [DBG] Connection id "0HNP4MURF33C3" received FIN.
+2026-10-07 17:12:37.692 -04:00 [DBG] Connection id "0HNP4MURF33C3" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-10-07 17:12:37.696 -04:00 [DBG] Connection id "0HNP4MURF33C3" disconnecting.
+2026-10-07 17:12:37.701 -04:00 [DBG] Connection id "0HNP4MURF33C3" stopped.
+2026-10-07 17:12:38.344 -04:00 [DBG] Connection id "0HNP4MURF33C4" accepted.
+2026-10-07 17:12:38.347 -04:00 [DBG] Connection id "0HNP4MURF33C4" started.
+2026-10-07 17:12:38.348 -04:00 [DBG] Connection id "0HNP4MURF33C5" accepted.
+2026-10-07 17:12:38.352 -04:00 [DBG] Connection id "0HNP4MURF33C5" started.
+2026-10-07 17:12:38.468 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/swagger - null null
+2026-10-07 17:12:38.682 -04:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2026-10-07 17:12:38.723 -04:00 [DBG] No candidates found for the request path '/swagger'
+2026-10-07 17:12:38.725 -04:00 [DBG] Request did not match any endpoints
+2026-10-07 17:12:38.881 -04:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-10-07 17:12:38.905 -04:00 [INF] HTTP GET /swagger responded 301 in 176.3815 ms
+2026-10-07 17:12:38.921 -04:00 [DBG] Connection id "0HNP4MURF33C4" completed keep alive response.
+2026-10-07 17:12:38.924 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/swagger - 301 0 null 460.7058ms
+2026-10-07 17:12:38.933 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/swagger/index.html - null null
+2026-10-07 17:12:38.939 -04:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2026-10-07 17:12:38.941 -04:00 [DBG] Request did not match any endpoints
+2026-10-07 17:12:38.943 -04:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-10-07 17:12:39.026 -04:00 [DBG] Response markup is scheduled to include Browser Link script injection.
+2026-10-07 17:12:39.032 -04:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2026-10-07 17:12:39.051 -04:00 [INF] HTTP GET /swagger/index.html responded 200 in 108.9159 ms
+2026-10-07 17:12:39.057 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/swagger/swagger-ui.css - null null
+2026-10-07 17:12:39.058 -04:00 [DBG] Connection id "0HNP4MURF33C6" accepted.
+2026-10-07 17:12:39.066 -04:00 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2026-10-07 17:12:39.071 -04:00 [DBG] Connection id "0HNP4MURF33C6" started.
+2026-10-07 17:12:39.063 -04:00 [DBG] Response markup was updated to include Browser Link script injection.
+2026-10-07 17:12:39.077 -04:00 [DBG] Connection id "0HNP4MURF33C7" accepted.
+2026-10-07 17:12:39.079 -04:00 [DBG] Request did not match any endpoints
+2026-10-07 17:12:39.083 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/swagger/index.css - null null
+2026-10-07 17:12:39.085 -04:00 [DBG] Response markup was updated to include browser refresh script injection.
+2026-10-07 17:12:39.089 -04:00 [DBG] Connection id "0HNP4MURF33C7" started.
+2026-10-07 17:12:39.098 -04:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-10-07 17:12:39.102 -04:00 [DBG] No candidates found for the request path '/swagger/index.css'
+2026-10-07 17:12:39.103 -04:00 [DBG] Connection id "0HNP4MURF33C4" completed keep alive response.
+2026-10-07 17:12:39.105 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/swagger/swagger-ui-bundle.js - null null
+2026-10-07 17:12:39.111 -04:00 [DBG] Request did not match any endpoints
+2026-10-07 17:12:39.116 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/swagger/index.html - 200 null text/html;charset=utf-8 183.4375ms
+2026-10-07 17:12:39.125 -04:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-10-07 17:12:39.121 -04:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+2026-10-07 17:12:39.163 -04:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-10-07 17:12:39.172 -04:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2026-10-07 17:12:39.175 -04:00 [DBG] Request did not match any endpoints
+2026-10-07 17:12:39.182 -04:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 87.3586 ms
+2026-10-07 17:12:39.184 -04:00 [INF] HTTP GET /swagger/index.css responded 200 in 59.6180 ms
+2026-10-07 17:12:39.186 -04:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-10-07 17:12:39.194 -04:00 [DBG] Connection id "0HNP4MURF33C5" completed keep alive response.
+2026-10-07 17:12:39.199 -04:00 [DBG] Connection id "0HNP4MURF33C6" completed keep alive response.
+2026-10-07 17:12:39.208 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/swagger/swagger-ui.css - 200 152034 text/css 151.202ms
+2026-10-07 17:12:39.219 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/swagger/index.css - 200 202 text/css 135.9601ms
+2026-10-07 17:12:39.234 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-07 17:12:39.241 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/swagger/index.js - null null
+2026-10-07 17:12:39.252 -04:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2026-10-07 17:12:39.258 -04:00 [DBG] No candidates found for the request path '/swagger/index.js'
+2026-10-07 17:12:39.258 -04:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-10-07 17:12:39.259 -04:00 [DBG] Request did not match any endpoints
+2026-10-07 17:12:39.261 -04:00 [DBG] Request did not match any endpoints
+2026-10-07 17:12:39.263 -04:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 76.9313 ms
+2026-10-07 17:12:39.266 -04:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-10-07 17:12:39.267 -04:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-10-07 17:12:39.270 -04:00 [DBG] Connection id "0HNP4MURF33C7" completed keep alive response.
+2026-10-07 17:12:39.284 -04:00 [INF] HTTP GET /swagger/index.js responded 200 in 16.9863 ms
+2026-10-07 17:12:39.285 -04:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-10-07 17:12:39.287 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/swagger/swagger-ui-bundle.js - 200 1452753 text/javascript 182.0904ms
+2026-10-07 17:12:39.291 -04:00 [DBG] Connection id "0HNP4MURF33C6" completed keep alive response.
+2026-10-07 17:12:39.306 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/swagger/index.js - 200 null application/javascript;charset=utf-8 64.8025ms
+2026-10-07 17:12:39.303 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-07 17:12:39.295 -04:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 28.8178 ms
+2026-10-07 17:12:39.323 -04:00 [DBG] Connection id "0HNP4MURF33C7" completed keep alive response.
+2026-10-07 17:12:39.323 -04:00 [DBG] Connection id "0HNP4MURF33C5" completed keep alive response.
+2026-10-07 17:12:39.325 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 21.8675ms
+2026-10-07 17:12:39.326 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/swagger/swagger-ui-standalone-preset.js - 200 230293 text/javascript 92.8179ms
+2026-10-07 17:12:39.338 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/_vs/browserLink - null null
+2026-10-07 17:12:39.398 -04:00 [DBG] Connection id "0HNP4MURF33C7" completed keep alive response.
+2026-10-07 17:12:39.405 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.0349ms
+2026-10-07 17:12:39.835 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/swagger/v1/swagger.json - null null
+2026-10-07 17:12:39.842 -04:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2026-10-07 17:12:39.843 -04:00 [DBG] Request did not match any endpoints
+2026-10-07 17:12:39.845 -04:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-10-07 17:12:40.042 -04:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 197.5597 ms
+2026-10-07 17:12:40.046 -04:00 [DBG] Connection id "0HNP4MURF33C7" completed keep alive response.
+2026-10-07 17:12:40.050 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 214.0884ms
+2026-10-07 17:17:40.413 -04:00 [DBG] Connection id "0HNP4MURF33C4" received FIN.
+2026-10-07 17:17:40.438 -04:00 [DBG] Connection id "0HNP4MURF33C5" received FIN.
+2026-10-07 17:17:40.500 -04:00 [DBG] Connection id "0HNP4MURF33C4" disconnecting.
+2026-10-07 17:17:40.526 -04:00 [DBG] Connection id "0HNP4MURF33C5" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-10-07 17:17:40.458 -04:00 [DBG] Connection id "0HNP4MURF33C6" received FIN.
+2026-10-07 17:17:40.549 -04:00 [DBG] Connection id "0HNP4MURF33C5" disconnecting.
+2026-10-07 17:17:40.478 -04:00 [DBG] Connection id "0HNP4MURF33C7" received FIN.
+2026-10-07 17:17:40.547 -04:00 [DBG] Connection id "0HNP4MURF33C4" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-10-07 17:17:40.592 -04:00 [DBG] Connection id "0HNP4MURF33C7" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-10-07 17:17:40.579 -04:00 [DBG] Connection id "0HNP4MURF33C6" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-10-07 17:17:40.596 -04:00 [DBG] Connection id "0HNP4MURF33C5" stopped.
+2026-10-07 17:17:40.600 -04:00 [DBG] Connection id "0HNP4MURF33C7" disconnecting.
+2026-10-07 17:17:40.603 -04:00 [DBG] Connection id "0HNP4MURF33C6" disconnecting.
+2026-10-07 17:17:40.603 -04:00 [DBG] Connection id "0HNP4MURF33C4" stopped.
+2026-10-07 17:17:40.608 -04:00 [DBG] Connection id "0HNP4MURF33C7" stopped.
+2026-10-07 17:17:40.609 -04:00 [DBG] Connection id "0HNP4MURF33C6" stopped.
+2026-10-07 17:37:03.624 -04:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2026-10-07 17:37:04.065 -04:00 [DBG] Entity Framework Core 8.0.11 initialized 'PostDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:8.0.11+52a6b9f2ddd23fcabd1c673b4a2e273495129481' with options: None
+2026-10-07 17:37:04.075 -04:00 [DBG] Creating DbConnection.
+2026-10-07 17:37:04.117 -04:00 [DBG] Created DbConnection. (40ms).
+2026-10-07 17:37:04.120 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.125 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.225 -04:00 [DBG] Opened connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.228 -04:00 [DBG] Closing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.235 -04:00 [DBG] Closed connection to database 'posts' on server 'tcp://localhost:5432' (4ms).
+2026-10-07 17:37:04.240 -04:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2026-10-07 17:37:04.245 -04:00 [DBG] Created DbCommand for 'ExecuteScalar' (4ms).
+2026-10-07 17:37:04.246 -04:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (7ms).
+2026-10-07 17:37:04.248 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.267 -04:00 [DBG] Opened connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.274 -04:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2026-10-07 17:37:04.320 -04:00 [INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2026-10-07 17:37:04.322 -04:00 [DBG] Closing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.324 -04:00 [DBG] Closed connection to database 'posts' on server 'tcp://localhost:5432' (1ms).
+2026-10-07 17:37:04.333 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.334 -04:00 [DBG] Opened connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.335 -04:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2026-10-07 17:37:04.335 -04:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2026-10-07 17:37:04.336 -04:00 [DBG] Initialized DbCommand for 'ExecuteReader' (1ms).
+2026-10-07 17:37:04.337 -04:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2026-10-07 17:37:04.341 -04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2026-10-07 17:37:04.347 -04:00 [DBG] Closing data reader to 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.348 -04:00 [DBG] A data reader for 'posts' on server 'tcp://localhost:5432' is being disposed after spending 5ms reading results.
+2026-10-07 17:37:04.349 -04:00 [DBG] Closing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.350 -04:00 [DBG] Closed connection to database 'posts' on server 'tcp://localhost:5432' (0ms).
+2026-10-07 17:37:04.352 -04:00 [DBG] Migrating using database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.353 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.353 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.362 -04:00 [DBG] Opened connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.362 -04:00 [DBG] Closing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.363 -04:00 [DBG] Closed connection to database 'posts' on server 'tcp://localhost:5432' (0ms).
+2026-10-07 17:37:04.365 -04:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2026-10-07 17:37:04.365 -04:00 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2026-10-07 17:37:04.366 -04:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (1ms).
+2026-10-07 17:37:04.367 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.367 -04:00 [DBG] Opened connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.368 -04:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2026-10-07 17:37:04.370 -04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2026-10-07 17:37:04.371 -04:00 [DBG] Closing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.372 -04:00 [DBG] Closed connection to database 'posts' on server 'tcp://localhost:5432' (0ms).
+2026-10-07 17:37:04.373 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.373 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.382 -04:00 [DBG] Opened connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.383 -04:00 [DBG] Closing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.384 -04:00 [DBG] Closed connection to database 'posts' on server 'tcp://localhost:5432' (0ms).
+2026-10-07 17:37:04.385 -04:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2026-10-07 17:37:04.386 -04:00 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2026-10-07 17:37:04.386 -04:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (1ms).
+2026-10-07 17:37:04.388 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.388 -04:00 [DBG] Opened connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.389 -04:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2026-10-07 17:37:04.391 -04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2026-10-07 17:37:04.392 -04:00 [DBG] Closing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.392 -04:00 [DBG] Closed connection to database 'posts' on server 'tcp://localhost:5432' (0ms).
+2026-10-07 17:37:04.393 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.394 -04:00 [DBG] Opened connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.395 -04:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2026-10-07 17:37:04.396 -04:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2026-10-07 17:37:04.396 -04:00 [DBG] Initialized DbCommand for 'ExecuteReader' (1ms).
+2026-10-07 17:37:04.397 -04:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2026-10-07 17:37:04.399 -04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2026-10-07 17:37:04.400 -04:00 [DBG] Closing data reader to 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.401 -04:00 [DBG] A data reader for 'posts' on server 'tcp://localhost:5432' is being disposed after spending 0ms reading results.
+2026-10-07 17:37:04.401 -04:00 [DBG] Closing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.402 -04:00 [DBG] Closed connection to database 'posts' on server 'tcp://localhost:5432' (0ms).
+2026-10-07 17:37:04.412 -04:00 [INF] No migrations were applied. The database is already up to date.
+2026-10-07 17:37:04.414 -04:00 [INF] Database migrations applied
+2026-10-07 17:37:04.417 -04:00 [DBG] 'PostDbContext' disposed.
+2026-10-07 17:37:04.419 -04:00 [DBG] Disposing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:37:04.421 -04:00 [DBG] Disposed connection to database 'posts' on server 'tcp://localhost:5432' (2ms).
+2026-10-07 17:37:04.477 -04:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2026-10-07 17:37:04.526 -04:00 [DBG] Hosting starting
+2026-10-07 17:37:04.551 -04:00 [INF] User profile is available. Using 'C:\Users\ashut\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-07 17:37:04.558 -04:00 [DBG] Reading data from file 'C:\Users\ashut\AppData\Local\ASP.NET\DataProtection-Keys\key-1aefe2f7-a78f-402e-8cca-a7efaaf710db.xml'.
+2026-10-07 17:37:04.565 -04:00 [DBG] Reading data from file 'C:\Users\ashut\AppData\Local\ASP.NET\DataProtection-Keys\key-5f7358ee-6761-44e0-a4ec-3ff3e2cb93b3.xml'.
+2026-10-07 17:37:04.567 -04:00 [DBG] Reading data from file 'C:\Users\ashut\AppData\Local\ASP.NET\DataProtection-Keys\key-f49fc337-19c9-4efe-9e8d-e9196b0d62ea.xml'.
+2026-10-07 17:37:04.571 -04:00 [DBG] Found key {1aefe2f7-a78f-402e-8cca-a7efaaf710db}.
+2026-10-07 17:37:04.574 -04:00 [DBG] Found key {5f7358ee-6761-44e0-a4ec-3ff3e2cb93b3}.
+2026-10-07 17:37:04.575 -04:00 [DBG] Found key {f49fc337-19c9-4efe-9e8d-e9196b0d62ea}.
+2026-10-07 17:37:04.579 -04:00 [DBG] Considering key {1aefe2f7-a78f-402e-8cca-a7efaaf710db} with expiration date 2026-12-31 15:29:51Z as default key.
+2026-10-07 17:37:04.583 -04:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2026-10-07 17:37:04.585 -04:00 [DBG] Decrypting secret element using Windows DPAPI.
+2026-10-07 17:37:04.586 -04:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2026-10-07 17:37:04.589 -04:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2026-10-07 17:37:04.592 -04:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2026-10-07 17:37:04.594 -04:00 [DBG] Using key {1aefe2f7-a78f-402e-8cca-a7efaaf710db} as the default key.
+2026-10-07 17:37:04.596 -04:00 [DBG] Key ring with default key {1aefe2f7-a78f-402e-8cca-a7efaaf710db} was loaded during application startup.
+2026-10-07 17:37:04.687 -04:00 [INF] Now listening on: http://localhost:5002
+2026-10-07 17:37:04.689 -04:00 [DBG] Loaded hosting startup assembly PostService
+2026-10-07 17:37:04.690 -04:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2026-10-07 17:37:04.691 -04:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2026-10-07 17:37:04.692 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-07 17:37:04.693 -04:00 [INF] Hosting environment: Development
+2026-10-07 17:37:04.694 -04:00 [INF] Content root path: C:\Users\ashut\source\repos\SocialPlatform\backend\services\post-service\PostService
+2026-10-07 17:37:04.695 -04:00 [DBG] Hosting started
+2026-10-07 17:37:04.947 -04:00 [DBG] Connection id "0HNP4NCGO1KCV" received FIN.
+2026-10-07 17:37:04.951 -04:00 [DBG] Connection id "0HNP4NCGO1KCV" accepted.
+2026-10-07 17:37:04.952 -04:00 [DBG] Connection id "0HNP4NCGO1KCV" started.
+2026-10-07 17:37:04.957 -04:00 [DBG] Connection id "0HNP4NCGO1KCV" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-10-07 17:37:04.958 -04:00 [DBG] Connection id "0HNP4NCGO1KCV" disconnecting.
+2026-10-07 17:37:04.962 -04:00 [DBG] Connection id "0HNP4NCGO1KCV" stopped.
+2026-10-07 17:37:05.659 -04:00 [DBG] Connection id "0HNP4NCGO1KD0" accepted.
+2026-10-07 17:37:05.662 -04:00 [DBG] Connection id "0HNP4NCGO1KD0" started.
+2026-10-07 17:37:05.663 -04:00 [DBG] Connection id "0HNP4NCGO1KD1" accepted.
+2026-10-07 17:37:05.676 -04:00 [DBG] Connection id "0HNP4NCGO1KD1" started.
+2026-10-07 17:37:05.822 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/swagger/index.html - null null
+2026-10-07 17:37:05.936 -04:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2026-10-07 17:37:05.962 -04:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2026-10-07 17:37:05.968 -04:00 [DBG] Request did not match any endpoints
+2026-10-07 17:37:06.059 -04:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-10-07 17:37:06.144 -04:00 [DBG] Response markup is scheduled to include Browser Link script injection.
+2026-10-07 17:37:06.147 -04:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2026-10-07 17:37:06.171 -04:00 [INF] HTTP GET /swagger/index.html responded 200 in 199.1970 ms
+2026-10-07 17:37:06.174 -04:00 [DBG] Response markup was updated to include Browser Link script injection.
+2026-10-07 17:37:06.177 -04:00 [DBG] Response markup was updated to include browser refresh script injection.
+2026-10-07 17:37:06.179 -04:00 [DBG] Connection id "0HNP4NCGO1KD0" completed keep alive response.
+2026-10-07 17:37:06.186 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/swagger/index.html - 200 null text/html;charset=utf-8 364.3342ms
+2026-10-07 17:37:06.186 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/swagger/index.js - null null
+2026-10-07 17:37:06.196 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-07 17:37:06.197 -04:00 [DBG] No candidates found for the request path '/swagger/index.js'
+2026-10-07 17:37:06.202 -04:00 [DBG] Request did not match any endpoints
+2026-10-07 17:37:06.204 -04:00 [DBG] Connection id "0HNP4NCGO1KD0" completed keep alive response.
+2026-10-07 17:37:06.204 -04:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-10-07 17:37:06.213 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 17.538ms
+2026-10-07 17:37:06.218 -04:00 [INF] HTTP GET /swagger/index.js responded 200 in 14.9326 ms
+2026-10-07 17:37:06.221 -04:00 [DBG] Connection id "0HNP4NCGO1KD1" completed keep alive response.
+2026-10-07 17:37:06.223 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/swagger/index.js - 200 null application/javascript;charset=utf-8 37.1466ms
+2026-10-07 17:37:06.260 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/_vs/browserLink - null null
+2026-10-07 17:37:06.334 -04:00 [DBG] Connection id "0HNP4NCGO1KD1" completed keep alive response.
+2026-10-07 17:37:06.340 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/_vs/browserLink - 200 null text/javascript; charset=UTF-8 79.0622ms
+2026-10-07 17:37:06.543 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/swagger/v1/swagger.json - null null
+2026-10-07 17:37:06.656 -04:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2026-10-07 17:37:06.662 -04:00 [DBG] Request did not match any endpoints
+2026-10-07 17:37:06.671 -04:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-10-07 17:37:06.985 -04:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 317.2062 ms
+2026-10-07 17:37:06.989 -04:00 [DBG] Connection id "0HNP4NCGO1KD1" completed keep alive response.
+2026-10-07 17:37:06.991 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 448.3555ms
+2026-10-07 17:38:16.612 -04:00 [DBG] Connection id "0HNP4NCGO1KD2" accepted.
+2026-10-07 17:38:16.620 -04:00 [DBG] Connection id "0HNP4NCGO1KD2" started.
+2026-10-07 17:38:16.623 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/api/posts/feed?pageNumber=1&pageSize=10 - null null
+2026-10-07 17:38:16.634 -04:00 [DBG] 2 candidate(s) found for the request path '/api/posts/feed'
+2026-10-07 17:38:16.641 -04:00 [DBG] Endpoint 'PostService.Controller.PostsController.GetFeed (PostService)' with route pattern 'api/Posts/feed' is valid for the request path '/api/posts/feed'
+2026-10-07 17:38:16.645 -04:00 [DBG] Endpoint 'PostService.Controller.PostsController.GetPost (PostService)' with route pattern 'api/Posts/{id}' is valid for the request path '/api/posts/feed'
+2026-10-07 17:38:16.648 -04:00 [DBG] Request matched endpoint 'PostService.Controller.PostsController.GetFeed (PostService)'
+2026-10-07 17:38:16.766 -04:00 [DBG] Successfully validated the token.
+2026-10-07 17:38:16.772 -04:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2026-10-07 17:38:16.776 -04:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-10-07 17:38:16.779 -04:00 [WRN] Failed to determine the https port for redirect.
+2026-10-07 17:38:16.781 -04:00 [INF] Executing endpoint 'PostService.Controller.PostsController.GetFeed (PostService)'
+2026-10-07 17:38:16.844 -04:00 [INF] Route matched with {action = "GetFeed", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFeed(Int32, Int32) on controller PostService.Controller.PostsController (PostService).
+2026-10-07 17:38:16.851 -04:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2026-10-07 17:38:16.854 -04:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2026-10-07 17:38:16.857 -04:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2026-10-07 17:38:16.861 -04:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2026-10-07 17:38:16.864 -04:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2026-10-07 17:38:16.869 -04:00 [DBG] Executing controller factory for controller PostService.Controller.PostsController (PostService)
+2026-10-07 17:38:16.874 -04:00 [DBG] Executed controller factory for controller PostService.Controller.PostsController (PostService)
+2026-10-07 17:38:16.892 -04:00 [DBG] Attempting to bind parameter 'pageNumber' of type 'System.Int32' ...
+2026-10-07 17:38:16.897 -04:00 [DBG] Attempting to bind parameter 'pageNumber' of type 'System.Int32' using the name 'pageNumber' in request data ...
+2026-10-07 17:38:16.900 -04:00 [DBG] Done attempting to bind parameter 'pageNumber' of type 'System.Int32'.
+2026-10-07 17:38:16.901 -04:00 [DBG] Done attempting to bind parameter 'pageNumber' of type 'System.Int32'.
+2026-10-07 17:38:16.903 -04:00 [DBG] Attempting to validate the bound parameter 'pageNumber' of type 'System.Int32' ...
+2026-10-07 17:38:16.908 -04:00 [DBG] Done attempting to validate the bound parameter 'pageNumber' of type 'System.Int32'.
+2026-10-07 17:38:16.912 -04:00 [DBG] Attempting to bind parameter 'pageSize' of type 'System.Int32' ...
+2026-10-07 17:38:16.914 -04:00 [DBG] Attempting to bind parameter 'pageSize' of type 'System.Int32' using the name 'pageSize' in request data ...
+2026-10-07 17:38:16.916 -04:00 [DBG] Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+2026-10-07 17:38:16.918 -04:00 [DBG] Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+2026-10-07 17:38:16.922 -04:00 [DBG] Attempting to validate the bound parameter 'pageSize' of type 'System.Int32' ...
+2026-10-07 17:38:16.925 -04:00 [DBG] Done attempting to validate the bound parameter 'pageSize' of type 'System.Int32'.
+2026-10-07 17:38:16.967 -04:00 [DBG] Entity Framework Core 8.0.11 initialized 'PostDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:8.0.11+52a6b9f2ddd23fcabd1c673b4a2e273495129481' with options: None
+2026-10-07 17:38:17.041 -04:00 [DBG] Compiling query expression: 
+'DbSet<Post>()
+    .Where(p => !(p.IsDeleted))
+    .Count()'
+2026-10-07 17:38:17.573 -04:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleAsync<int>(
+    asyncEnumerable: new SingleQueryingEnumerable<int>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> 0
+            SELECT CAST(count(*) AS integer)
+            FROM Posts AS p
+            WHERE Not(p.IsDeleted)), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, int>, 
+        PostService.Data.PostDbContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2026-10-07 17:38:17.671 -04:00 [DBG] Creating DbConnection.
+2026-10-07 17:38:17.677 -04:00 [DBG] Created DbConnection. (5ms).
+2026-10-07 17:38:17.687 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:38:17.697 -04:00 [DBG] Opened connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:38:17.710 -04:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2026-10-07 17:38:17.717 -04:00 [DBG] Created DbCommand for 'ExecuteReader' (6ms).
+2026-10-07 17:38:17.722 -04:00 [DBG] Initialized DbCommand for 'ExecuteReader' (12ms).
+2026-10-07 17:38:17.733 -04:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Posts" AS p
+WHERE NOT (p."IsDeleted")
+2026-10-07 17:38:17.810 -04:00 [INF] Executed DbCommand (78ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Posts" AS p
+WHERE NOT (p."IsDeleted")
+2026-10-07 17:38:17.837 -04:00 [DBG] Closing data reader to 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:38:17.840 -04:00 [DBG] A data reader for 'posts' on server 'tcp://localhost:5432' is being disposed after spending 24ms reading results.
+2026-10-07 17:38:17.846 -04:00 [DBG] Closing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:38:17.849 -04:00 [DBG] Closed connection to database 'posts' on server 'tcp://localhost:5432' (3ms).
+2026-10-07 17:38:17.862 -04:00 [DBG] Compiling query expression: 
+'DbSet<Post>()
+    .Where(p => !(p.IsDeleted))
+    .OrderByDescending(p => p.CreatedAt)
+    .Skip(__p_0)
+    .Take(__p_1)'
+2026-10-07 17:38:17.936 -04:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Post>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Post.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Post.AuthorId (Guid) Required Index, 1], [Property: Post.CommentCount (int) Required, 2], [Property: Post.Content (string) Required MaxLength(500), 3], [Property: Post.CreatedAt (DateTime) Required Index ValueGenerated.OnAdd, 4], [Property: Post.IsDeleted (bool) Required, 5], [Property: Post.LikeCount (int) Required, 6] }
+        SELECT p.Id, p.AuthorId, p.CommentCount, p.Content, p.CreatedAt, p.IsDeleted, p.LikeCount
+        FROM Posts AS p
+        WHERE Not(p.IsDeleted)
+        ORDER BY p.CreatedAt DESC
+        OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Post>, 
+    PostService.Data.PostDbContext, 
+    False, 
+    False, 
+    True
+)'
+2026-10-07 17:38:17.959 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:38:17.965 -04:00 [DBG] Opened connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:38:17.969 -04:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2026-10-07 17:38:17.972 -04:00 [DBG] Created DbCommand for 'ExecuteReader' (3ms).
+2026-10-07 17:38:17.999 -04:00 [DBG] Initialized DbCommand for 'ExecuteReader' (29ms).
+2026-10-07 17:38:18.007 -04:00 [DBG] Executing DbCommand [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."AuthorId", p."CommentCount", p."Content", p."CreatedAt", p."IsDeleted", p."LikeCount"
+FROM "Posts" AS p
+WHERE NOT (p."IsDeleted")
+ORDER BY p."CreatedAt" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2026-10-07 17:38:18.054 -04:00 [INF] Executed DbCommand (52ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."AuthorId", p."CommentCount", p."Content", p."CreatedAt", p."IsDeleted", p."LikeCount"
+FROM "Posts" AS p
+WHERE NOT (p."IsDeleted")
+ORDER BY p."CreatedAt" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2026-10-07 17:38:18.063 -04:00 [DBG] Closing data reader to 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:38:18.066 -04:00 [DBG] A data reader for 'posts' on server 'tcp://localhost:5432' is being disposed after spending 5ms reading results.
+2026-10-07 17:38:18.069 -04:00 [DBG] Closing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:38:18.073 -04:00 [DBG] Closed connection to database 'posts' on server 'tcp://localhost:5432' (3ms).
+2026-10-07 17:38:18.082 -04:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2026-10-07 17:38:18.092 -04:00 [DBG] No information found on request to perform content negotiation.
+2026-10-07 17:38:18.094 -04:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2026-10-07 17:38:18.095 -04:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2026-10-07 17:38:18.098 -04:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2026-10-07 17:38:18.101 -04:00 [INF] Executing OkObjectResult, writing value of type 'PostService.Models.PagedResult`1[[PostService.Models.PostResponseDto, PostService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-07 17:38:18.145 -04:00 [INF] Executed action PostService.Controller.PostsController.GetFeed (PostService) in 1273.8393ms
+2026-10-07 17:38:18.148 -04:00 [INF] Executed endpoint 'PostService.Controller.PostsController.GetFeed (PostService)'
+2026-10-07 17:38:18.152 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 1500.2348 ms
+2026-10-07 17:38:18.159 -04:00 [DBG] 'PostDbContext' disposed.
+2026-10-07 17:38:18.161 -04:00 [DBG] Connection id "0HNP4NCGO1KD2" received FIN.
+2026-10-07 17:38:18.166 -04:00 [DBG] Connection id "0HNP4NCGO1KD2" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-10-07 17:38:18.169 -04:00 [DBG] Disposing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:38:18.171 -04:00 [DBG] Connection id "0HNP4NCGO1KD2" disconnecting.
+2026-10-07 17:38:18.175 -04:00 [DBG] Disposed connection to database 'posts' on server 'tcp://localhost:5432' (6ms).
+2026-10-07 17:38:18.180 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/api/posts/feed?pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 1557.2104ms
+2026-10-07 17:38:18.192 -04:00 [DBG] Connection id "0HNP4NCGO1KD2" stopped.
+2026-10-07 17:38:40.645 -04:00 [DBG] Connection id "0HNP4NCGO1KD0" received FIN.
+2026-10-07 17:38:40.645 -04:00 [DBG] Connection id "0HNP4NCGO1KD1" received FIN.
+2026-10-07 17:38:40.657 -04:00 [DBG] Connection id "0HNP4NCGO1KD0" disconnecting.
+2026-10-07 17:38:40.661 -04:00 [DBG] Connection id "0HNP4NCGO1KD1" disconnecting.
+2026-10-07 17:38:40.672 -04:00 [DBG] Connection id "0HNP4NCGO1KD0" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-10-07 17:38:40.676 -04:00 [DBG] Connection id "0HNP4NCGO1KD1" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-10-07 17:38:40.690 -04:00 [DBG] Connection id "0HNP4NCGO1KD0" stopped.
+2026-10-07 17:38:40.696 -04:00 [DBG] Connection id "0HNP4NCGO1KD1" stopped.
+2026-10-07 17:39:20.913 -04:00 [DBG] Connection id "0HNP4NCGO1KD3" accepted.
+2026-10-07 17:39:20.921 -04:00 [DBG] Connection id "0HNP4NCGO1KD3" started.
+2026-10-07 17:39:20.926 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5002/api/posts - application/json 320
+2026-10-07 17:39:20.932 -04:00 [DBG] 1 candidate(s) found for the request path '/api/posts'
+2026-10-07 17:39:20.934 -04:00 [DBG] Endpoint 'PostService.Controller.PostsController.CreatePost (PostService)' with route pattern 'api/Posts' is valid for the request path '/api/posts'
+2026-10-07 17:39:20.936 -04:00 [DBG] Request matched endpoint 'PostService.Controller.PostsController.CreatePost (PostService)'
+2026-10-07 17:39:20.939 -04:00 [DBG] The request has an origin header: 'http://localhost:3000'.
+2026-10-07 17:39:20.942 -04:00 [INF] CORS policy execution successful.
+2026-10-07 17:39:20.946 -04:00 [DBG] Successfully validated the token.
+2026-10-07 17:39:20.947 -04:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2026-10-07 17:39:20.955 -04:00 [DBG] Authorization was successful.
+2026-10-07 17:39:20.958 -04:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-10-07 17:39:20.960 -04:00 [INF] Executing endpoint 'PostService.Controller.PostsController.CreatePost (PostService)'
+2026-10-07 17:39:20.968 -04:00 [INF] Route matched with {action = "CreatePost", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreatePost(PostService.Models.CreatePostDto) on controller PostService.Controller.PostsController (PostService).
+2026-10-07 17:39:20.970 -04:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2026-10-07 17:39:20.971 -04:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2026-10-07 17:39:20.973 -04:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2026-10-07 17:39:20.976 -04:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2026-10-07 17:39:20.979 -04:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2026-10-07 17:39:20.980 -04:00 [DBG] Executing controller factory for controller PostService.Controller.PostsController (PostService)
+2026-10-07 17:39:20.982 -04:00 [DBG] Executed controller factory for controller PostService.Controller.PostsController (PostService)
+2026-10-07 17:39:20.984 -04:00 [DBG] Attempting to bind parameter 'dto' of type 'PostService.Models.CreatePostDto' ...
+2026-10-07 17:39:20.987 -04:00 [DBG] Attempting to bind parameter 'dto' of type 'PostService.Models.CreatePostDto' using the name '' in request data ...
+2026-10-07 17:39:20.990 -04:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2026-10-07 17:39:20.998 -04:00 [DBG] Connection id "0HNP4NCGO1KD3", Request id "0HNP4NCGO1KD3:00000001": started reading request body.
+2026-10-07 17:39:21.000 -04:00 [DBG] Connection id "0HNP4NCGO1KD3", Request id "0HNP4NCGO1KD3:00000001": done reading request body.
+2026-10-07 17:39:21.009 -04:00 [DBG] JSON input formatter succeeded, deserializing to type 'PostService.Models.CreatePostDto'
+2026-10-07 17:39:21.011 -04:00 [DBG] Done attempting to bind parameter 'dto' of type 'PostService.Models.CreatePostDto'.
+2026-10-07 17:39:21.012 -04:00 [DBG] Done attempting to bind parameter 'dto' of type 'PostService.Models.CreatePostDto'.
+2026-10-07 17:39:21.014 -04:00 [DBG] Attempting to validate the bound parameter 'dto' of type 'PostService.Models.CreatePostDto' ...
+2026-10-07 17:39:21.024 -04:00 [DBG] Done attempting to validate the bound parameter 'dto' of type 'PostService.Models.CreatePostDto'.
+2026-10-07 17:39:21.121 -04:00 [DBG] Entity Framework Core 8.0.11 initialized 'PostDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:8.0.11+52a6b9f2ddd23fcabd1c673b4a2e273495129481' with options: None
+2026-10-07 17:39:21.238 -04:00 [DBG] Context 'PostDbContext' started tracking 'Post' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-10-07 17:39:21.245 -04:00 [DBG] SaveChanges starting for 'PostDbContext'.
+2026-10-07 17:39:21.257 -04:00 [DBG] DetectChanges starting for 'PostDbContext'.
+2026-10-07 17:39:21.331 -04:00 [DBG] DetectChanges completed for 'PostDbContext'.
+2026-10-07 17:39:21.435 -04:00 [DBG] Creating DbConnection.
+2026-10-07 17:39:21.436 -04:00 [DBG] Created DbConnection. (1ms).
+2026-10-07 17:39:21.437 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:39:21.438 -04:00 [DBG] Opened connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:39:21.442 -04:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2026-10-07 17:39:21.443 -04:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2026-10-07 17:39:21.446 -04:00 [DBG] Initialized DbCommand for 'ExecuteReader' (4ms).
+2026-10-07 17:39:21.448 -04:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Int32), @p3='?', @p4='?' (DbType = DateTime), @p5='?' (DbType = Boolean), @p6='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Posts" ("Id", "AuthorId", "CommentCount", "Content", "CreatedAt", "IsDeleted", "LikeCount")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2026-10-07 17:39:21.471 -04:00 [INF] Executed DbCommand (23ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Int32), @p3='?', @p4='?' (DbType = DateTime), @p5='?' (DbType = Boolean), @p6='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Posts" ("Id", "AuthorId", "CommentCount", "Content", "CreatedAt", "IsDeleted", "LikeCount")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2026-10-07 17:39:21.479 -04:00 [DBG] Closing data reader to 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:39:21.481 -04:00 [DBG] A data reader for 'posts' on server 'tcp://localhost:5432' is being disposed after spending 6ms reading results.
+2026-10-07 17:39:21.483 -04:00 [DBG] Closing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:39:21.485 -04:00 [DBG] Closed connection to database 'posts' on server 'tcp://localhost:5432' (1ms).
+2026-10-07 17:39:21.496 -04:00 [DBG] An entity of type 'Post' tracked by 'PostDbContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-10-07 17:39:21.498 -04:00 [DBG] SaveChanges completed for 'PostDbContext' with 1 entities written to the database.
+2026-10-07 17:39:21.501 -04:00 [INF] Post created: 83aec40d-17b2-4c4e-955f-d21e2680cb9f
+2026-10-07 17:39:21.506 -04:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2026-10-07 17:39:21.510 -04:00 [DBG] No information found on request to perform content negotiation.
+2026-10-07 17:39:21.511 -04:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2026-10-07 17:39:21.512 -04:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2026-10-07 17:39:21.514 -04:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2026-10-07 17:39:21.516 -04:00 [INF] Executing CreatedAtActionResult, writing value of type 'PostService.Models.PostResponseDto'.
+2026-10-07 17:39:21.548 -04:00 [DBG] Found the endpoints ["PostService.Controller.PostsController.GetPost (PostService)"] for address (id=[83aec40d-17b2-4c4e-955f-d21e2680cb9f],action=[GetPost],controller=[Posts])
+2026-10-07 17:39:21.558 -04:00 [DBG] Successfully processed template api/Posts/{id} for PostService.Controller.PostsController.GetPost (PostService) resulting in /api/Posts/83aec40d-17b2-4c4e-955f-d21e2680cb9f and 
+2026-10-07 17:39:21.562 -04:00 [DBG] Link generation succeeded for endpoints ["PostService.Controller.PostsController.GetPost (PostService)"] with result /api/Posts/83aec40d-17b2-4c4e-955f-d21e2680cb9f
+2026-10-07 17:39:21.577 -04:00 [INF] Executed action PostService.Controller.PostsController.CreatePost (PostService) in 597.2006ms
+2026-10-07 17:39:21.581 -04:00 [INF] Executed endpoint 'PostService.Controller.PostsController.CreatePost (PostService)'
+2026-10-07 17:39:21.583 -04:00 [INF] HTTP POST /api/posts responded 201 in 645.1557 ms
+2026-10-07 17:39:21.592 -04:00 [DBG] 'PostDbContext' disposed.
+2026-10-07 17:39:21.593 -04:00 [DBG] Connection id "0HNP4NCGO1KD3" received FIN.
+2026-10-07 17:39:21.609 -04:00 [DBG] Connection id "0HNP4NCGO1KD3" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-10-07 17:39:21.609 -04:00 [DBG] Disposing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:39:21.611 -04:00 [DBG] Connection id "0HNP4NCGO1KD3" disconnecting.
+2026-10-07 17:39:21.613 -04:00 [DBG] Disposed connection to database 'posts' on server 'tcp://localhost:5432' (4ms).
+2026-10-07 17:39:21.617 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5002/api/posts - 201 null application/json; charset=utf-8 691.1446ms
+2026-10-07 17:39:21.621 -04:00 [DBG] Connection id "0HNP4NCGO1KD3" stopped.
+2026-10-07 17:39:21.655 -04:00 [DBG] Connection id "0HNP4NCGO1KD4" accepted.
+2026-10-07 17:39:21.656 -04:00 [DBG] Connection id "0HNP4NCGO1KD4" started.
+2026-10-07 17:39:21.657 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/api/posts/feed?pageNumber=1&pageSize=10 - null null
+2026-10-07 17:39:21.660 -04:00 [DBG] 2 candidate(s) found for the request path '/api/posts/feed'
+2026-10-07 17:39:21.661 -04:00 [DBG] Endpoint 'PostService.Controller.PostsController.GetFeed (PostService)' with route pattern 'api/Posts/feed' is valid for the request path '/api/posts/feed'
+2026-10-07 17:39:21.663 -04:00 [DBG] Endpoint 'PostService.Controller.PostsController.GetPost (PostService)' with route pattern 'api/Posts/{id}' is valid for the request path '/api/posts/feed'
+2026-10-07 17:39:21.665 -04:00 [DBG] Request matched endpoint 'PostService.Controller.PostsController.GetFeed (PostService)'
+2026-10-07 17:39:21.666 -04:00 [DBG] Successfully validated the token.
+2026-10-07 17:39:21.667 -04:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2026-10-07 17:39:21.668 -04:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-10-07 17:39:21.669 -04:00 [INF] Executing endpoint 'PostService.Controller.PostsController.GetFeed (PostService)'
+2026-10-07 17:39:21.670 -04:00 [INF] Route matched with {action = "GetFeed", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFeed(Int32, Int32) on controller PostService.Controller.PostsController (PostService).
+2026-10-07 17:39:21.672 -04:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2026-10-07 17:39:21.673 -04:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2026-10-07 17:39:21.675 -04:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2026-10-07 17:39:21.677 -04:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2026-10-07 17:39:21.680 -04:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2026-10-07 17:39:21.682 -04:00 [DBG] Executing controller factory for controller PostService.Controller.PostsController (PostService)
+2026-10-07 17:39:21.685 -04:00 [DBG] Executed controller factory for controller PostService.Controller.PostsController (PostService)
+2026-10-07 17:39:21.687 -04:00 [DBG] Attempting to bind parameter 'pageNumber' of type 'System.Int32' ...
+2026-10-07 17:39:21.690 -04:00 [DBG] Attempting to bind parameter 'pageNumber' of type 'System.Int32' using the name 'pageNumber' in request data ...
+2026-10-07 17:39:21.693 -04:00 [DBG] Done attempting to bind parameter 'pageNumber' of type 'System.Int32'.
+2026-10-07 17:39:21.695 -04:00 [DBG] Done attempting to bind parameter 'pageNumber' of type 'System.Int32'.
+2026-10-07 17:39:21.697 -04:00 [DBG] Attempting to validate the bound parameter 'pageNumber' of type 'System.Int32' ...
+2026-10-07 17:39:21.698 -04:00 [DBG] Done attempting to validate the bound parameter 'pageNumber' of type 'System.Int32'.
+2026-10-07 17:39:21.699 -04:00 [DBG] Attempting to bind parameter 'pageSize' of type 'System.Int32' ...
+2026-10-07 17:39:21.701 -04:00 [DBG] Attempting to bind parameter 'pageSize' of type 'System.Int32' using the name 'pageSize' in request data ...
+2026-10-07 17:39:21.702 -04:00 [DBG] Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+2026-10-07 17:39:21.702 -04:00 [DBG] Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+2026-10-07 17:39:21.703 -04:00 [DBG] Attempting to validate the bound parameter 'pageSize' of type 'System.Int32' ...
+2026-10-07 17:39:21.707 -04:00 [DBG] Done attempting to validate the bound parameter 'pageSize' of type 'System.Int32'.
+2026-10-07 17:39:21.708 -04:00 [DBG] Entity Framework Core 8.0.11 initialized 'PostDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:8.0.11+52a6b9f2ddd23fcabd1c673b4a2e273495129481' with options: None
+2026-10-07 17:39:21.715 -04:00 [DBG] Creating DbConnection.
+2026-10-07 17:39:21.716 -04:00 [DBG] Created DbConnection. (1ms).
+2026-10-07 17:39:21.719 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:39:21.720 -04:00 [DBG] Opened connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:39:21.722 -04:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2026-10-07 17:39:21.723 -04:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2026-10-07 17:39:21.728 -04:00 [DBG] Initialized DbCommand for 'ExecuteReader' (6ms).
+2026-10-07 17:39:21.738 -04:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Posts" AS p
+WHERE NOT (p."IsDeleted")
+2026-10-07 17:39:21.747 -04:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Posts" AS p
+WHERE NOT (p."IsDeleted")
+2026-10-07 17:39:21.751 -04:00 [DBG] Closing data reader to 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:39:21.752 -04:00 [DBG] A data reader for 'posts' on server 'tcp://localhost:5432' is being disposed after spending 1ms reading results.
+2026-10-07 17:39:21.755 -04:00 [DBG] Closing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:39:21.757 -04:00 [DBG] Closed connection to database 'posts' on server 'tcp://localhost:5432' (2ms).
+2026-10-07 17:39:21.761 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:39:21.763 -04:00 [DBG] Opened connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:39:21.767 -04:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2026-10-07 17:39:21.769 -04:00 [DBG] Created DbCommand for 'ExecuteReader' (4ms).
+2026-10-07 17:39:21.771 -04:00 [DBG] Initialized DbCommand for 'ExecuteReader' (5ms).
+2026-10-07 17:39:21.772 -04:00 [DBG] Executing DbCommand [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."AuthorId", p."CommentCount", p."Content", p."CreatedAt", p."IsDeleted", p."LikeCount"
+FROM "Posts" AS p
+WHERE NOT (p."IsDeleted")
+ORDER BY p."CreatedAt" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2026-10-07 17:39:21.778 -04:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."AuthorId", p."CommentCount", p."Content", p."CreatedAt", p."IsDeleted", p."LikeCount"
+FROM "Posts" AS p
+WHERE NOT (p."IsDeleted")
+ORDER BY p."CreatedAt" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2026-10-07 17:39:21.792 -04:00 [DBG] Context 'PostDbContext' started tracking 'Post' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-10-07 17:39:21.795 -04:00 [DBG] Closing data reader to 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:39:21.798 -04:00 [DBG] A data reader for 'posts' on server 'tcp://localhost:5432' is being disposed after spending 15ms reading results.
+2026-10-07 17:39:21.802 -04:00 [DBG] Closing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:39:21.804 -04:00 [DBG] Closed connection to database 'posts' on server 'tcp://localhost:5432' (2ms).
+2026-10-07 17:39:21.808 -04:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2026-10-07 17:39:21.811 -04:00 [DBG] No information found on request to perform content negotiation.
+2026-10-07 17:39:21.813 -04:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2026-10-07 17:39:21.814 -04:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2026-10-07 17:39:21.815 -04:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2026-10-07 17:39:21.819 -04:00 [INF] Executing OkObjectResult, writing value of type 'PostService.Models.PagedResult`1[[PostService.Models.PostResponseDto, PostService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-07 17:39:21.825 -04:00 [INF] Executed action PostService.Controller.PostsController.GetFeed (PostService) in 143.4686ms
+2026-10-07 17:39:21.828 -04:00 [INF] Executed endpoint 'PostService.Controller.PostsController.GetFeed (PostService)'
+2026-10-07 17:39:21.830 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 163.8661 ms
+2026-10-07 17:39:21.837 -04:00 [DBG] 'PostDbContext' disposed.
+2026-10-07 17:39:21.845 -04:00 [DBG] Disposing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:39:21.837 -04:00 [DBG] Connection id "0HNP4NCGO1KD4" received FIN.
+2026-10-07 17:39:21.848 -04:00 [DBG] Connection id "0HNP4NCGO1KD4" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-10-07 17:39:21.849 -04:00 [DBG] Connection id "0HNP4NCGO1KD4" disconnecting.
+2026-10-07 17:39:21.847 -04:00 [DBG] Disposed connection to database 'posts' on server 'tcp://localhost:5432' (1ms).
+2026-10-07 17:39:21.855 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/api/posts/feed?pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 197.7209ms
+2026-10-07 17:39:21.860 -04:00 [DBG] Connection id "0HNP4NCGO1KD4" stopped.
+2026-10-07 17:39:32.389 -04:00 [DBG] Connection id "0HNP4NCGO1KD5" accepted.
+2026-10-07 17:39:32.391 -04:00 [DBG] Connection id "0HNP4NCGO1KD5" started.
+2026-10-07 17:39:32.393 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/api/posts/feed?pageNumber=1&pageSize=10 - null null
+2026-10-07 17:39:32.398 -04:00 [DBG] 2 candidate(s) found for the request path '/api/posts/feed'
+2026-10-07 17:39:32.399 -04:00 [DBG] Endpoint 'PostService.Controller.PostsController.GetFeed (PostService)' with route pattern 'api/Posts/feed' is valid for the request path '/api/posts/feed'
+2026-10-07 17:39:32.402 -04:00 [DBG] Endpoint 'PostService.Controller.PostsController.GetPost (PostService)' with route pattern 'api/Posts/{id}' is valid for the request path '/api/posts/feed'
+2026-10-07 17:39:32.403 -04:00 [DBG] Request matched endpoint 'PostService.Controller.PostsController.GetFeed (PostService)'
+2026-10-07 17:39:32.405 -04:00 [DBG] Successfully validated the token.
+2026-10-07 17:39:32.405 -04:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2026-10-07 17:39:32.406 -04:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-10-07 17:39:32.407 -04:00 [INF] Executing endpoint 'PostService.Controller.PostsController.GetFeed (PostService)'
+2026-10-07 17:39:32.409 -04:00 [INF] Route matched with {action = "GetFeed", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFeed(Int32, Int32) on controller PostService.Controller.PostsController (PostService).
+2026-10-07 17:39:32.411 -04:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2026-10-07 17:39:32.413 -04:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2026-10-07 17:39:32.414 -04:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2026-10-07 17:39:32.416 -04:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2026-10-07 17:39:32.418 -04:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2026-10-07 17:39:32.419 -04:00 [DBG] Executing controller factory for controller PostService.Controller.PostsController (PostService)
+2026-10-07 17:39:32.421 -04:00 [DBG] Executed controller factory for controller PostService.Controller.PostsController (PostService)
+2026-10-07 17:39:32.422 -04:00 [DBG] Attempting to bind parameter 'pageNumber' of type 'System.Int32' ...
+2026-10-07 17:39:32.423 -04:00 [DBG] Attempting to bind parameter 'pageNumber' of type 'System.Int32' using the name 'pageNumber' in request data ...
+2026-10-07 17:39:32.425 -04:00 [DBG] Done attempting to bind parameter 'pageNumber' of type 'System.Int32'.
+2026-10-07 17:39:32.426 -04:00 [DBG] Done attempting to bind parameter 'pageNumber' of type 'System.Int32'.
+2026-10-07 17:39:32.427 -04:00 [DBG] Attempting to validate the bound parameter 'pageNumber' of type 'System.Int32' ...
+2026-10-07 17:39:32.430 -04:00 [DBG] Done attempting to validate the bound parameter 'pageNumber' of type 'System.Int32'.
+2026-10-07 17:39:32.431 -04:00 [DBG] Attempting to bind parameter 'pageSize' of type 'System.Int32' ...
+2026-10-07 17:39:32.433 -04:00 [DBG] Attempting to bind parameter 'pageSize' of type 'System.Int32' using the name 'pageSize' in request data ...
+2026-10-07 17:39:32.434 -04:00 [DBG] Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+2026-10-07 17:39:32.435 -04:00 [DBG] Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+2026-10-07 17:39:32.437 -04:00 [DBG] Attempting to validate the bound parameter 'pageSize' of type 'System.Int32' ...
+2026-10-07 17:39:32.438 -04:00 [DBG] Done attempting to validate the bound parameter 'pageSize' of type 'System.Int32'.
+2026-10-07 17:39:32.442 -04:00 [DBG] Entity Framework Core 8.0.11 initialized 'PostDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:8.0.11+52a6b9f2ddd23fcabd1c673b4a2e273495129481' with options: None
+2026-10-07 17:39:32.447 -04:00 [DBG] Creating DbConnection.
+2026-10-07 17:39:32.448 -04:00 [DBG] Created DbConnection. (1ms).
+2026-10-07 17:39:32.450 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:39:32.452 -04:00 [DBG] Opened connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:39:32.453 -04:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2026-10-07 17:39:32.455 -04:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2026-10-07 17:39:32.457 -04:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2026-10-07 17:39:32.459 -04:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Posts" AS p
+WHERE NOT (p."IsDeleted")
+2026-10-07 17:39:32.467 -04:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Posts" AS p
+WHERE NOT (p."IsDeleted")
+2026-10-07 17:39:32.469 -04:00 [DBG] Closing data reader to 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:39:32.470 -04:00 [DBG] A data reader for 'posts' on server 'tcp://localhost:5432' is being disposed after spending 1ms reading results.
+2026-10-07 17:39:32.472 -04:00 [DBG] Closing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:39:32.473 -04:00 [DBG] Closed connection to database 'posts' on server 'tcp://localhost:5432' (1ms).
+2026-10-07 17:39:32.476 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:39:32.478 -04:00 [DBG] Opened connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:39:32.480 -04:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2026-10-07 17:39:32.481 -04:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2026-10-07 17:39:32.483 -04:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2026-10-07 17:39:32.484 -04:00 [DBG] Executing DbCommand [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."AuthorId", p."CommentCount", p."Content", p."CreatedAt", p."IsDeleted", p."LikeCount"
+FROM "Posts" AS p
+WHERE NOT (p."IsDeleted")
+ORDER BY p."CreatedAt" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2026-10-07 17:39:32.488 -04:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."AuthorId", p."CommentCount", p."Content", p."CreatedAt", p."IsDeleted", p."LikeCount"
+FROM "Posts" AS p
+WHERE NOT (p."IsDeleted")
+ORDER BY p."CreatedAt" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2026-10-07 17:39:32.492 -04:00 [DBG] Context 'PostDbContext' started tracking 'Post' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-10-07 17:39:32.494 -04:00 [DBG] Closing data reader to 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:39:32.497 -04:00 [DBG] A data reader for 'posts' on server 'tcp://localhost:5432' is being disposed after spending 4ms reading results.
+2026-10-07 17:39:32.499 -04:00 [DBG] Closing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:39:32.500 -04:00 [DBG] Closed connection to database 'posts' on server 'tcp://localhost:5432' (1ms).
+2026-10-07 17:39:32.502 -04:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2026-10-07 17:39:32.505 -04:00 [DBG] No information found on request to perform content negotiation.
+2026-10-07 17:39:32.506 -04:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2026-10-07 17:39:32.507 -04:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2026-10-07 17:39:32.509 -04:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2026-10-07 17:39:32.511 -04:00 [INF] Executing OkObjectResult, writing value of type 'PostService.Models.PagedResult`1[[PostService.Models.PostResponseDto, PostService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-07 17:39:32.513 -04:00 [INF] Executed action PostService.Controller.PostsController.GetFeed (PostService) in 93.5042ms
+2026-10-07 17:39:32.516 -04:00 [INF] Executed endpoint 'PostService.Controller.PostsController.GetFeed (PostService)'
+2026-10-07 17:39:32.518 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 114.0636 ms
+2026-10-07 17:39:32.522 -04:00 [DBG] 'PostDbContext' disposed.
+2026-10-07 17:39:32.522 -04:00 [DBG] Connection id "0HNP4NCGO1KD5" received FIN.
+2026-10-07 17:39:32.525 -04:00 [DBG] Disposing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:39:32.526 -04:00 [DBG] Connection id "0HNP4NCGO1KD5" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-10-07 17:39:32.529 -04:00 [DBG] Disposed connection to database 'posts' on server 'tcp://localhost:5432' (3ms).
+2026-10-07 17:39:32.532 -04:00 [DBG] Connection id "0HNP4NCGO1KD5" disconnecting.
+2026-10-07 17:39:32.533 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/api/posts/feed?pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 140.4195ms
+2026-10-07 17:39:32.539 -04:00 [DBG] Connection id "0HNP4NCGO1KD5" stopped.
+2026-10-07 17:42:51.137 -04:00 [DBG] Connection id "0HNP4NCGO1KD6" accepted.
+2026-10-07 17:42:51.146 -04:00 [DBG] Connection id "0HNP4NCGO1KD6" started.
+2026-10-07 17:42:51.154 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/api/Posts/feed?pageNumber=1&pageSize=10 - null null
+2026-10-07 17:42:51.158 -04:00 [DBG] 2 candidate(s) found for the request path '/api/Posts/feed'
+2026-10-07 17:42:51.160 -04:00 [DBG] Endpoint 'PostService.Controller.PostsController.GetFeed (PostService)' with route pattern 'api/Posts/feed' is valid for the request path '/api/Posts/feed'
+2026-10-07 17:42:51.162 -04:00 [DBG] Endpoint 'PostService.Controller.PostsController.GetPost (PostService)' with route pattern 'api/Posts/{id}' is valid for the request path '/api/Posts/feed'
+2026-10-07 17:42:51.165 -04:00 [DBG] Request matched endpoint 'PostService.Controller.PostsController.GetFeed (PostService)'
+2026-10-07 17:42:51.167 -04:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-10-07 17:42:51.170 -04:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-10-07 17:42:51.171 -04:00 [INF] Executing endpoint 'PostService.Controller.PostsController.GetFeed (PostService)'
+2026-10-07 17:42:51.172 -04:00 [INF] Route matched with {action = "GetFeed", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFeed(Int32, Int32) on controller PostService.Controller.PostsController (PostService).
+2026-10-07 17:42:51.174 -04:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2026-10-07 17:42:51.176 -04:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2026-10-07 17:42:51.177 -04:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2026-10-07 17:42:51.179 -04:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2026-10-07 17:42:51.181 -04:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2026-10-07 17:42:51.184 -04:00 [DBG] Executing controller factory for controller PostService.Controller.PostsController (PostService)
+2026-10-07 17:42:51.186 -04:00 [DBG] Executed controller factory for controller PostService.Controller.PostsController (PostService)
+2026-10-07 17:42:51.188 -04:00 [DBG] Attempting to bind parameter 'pageNumber' of type 'System.Int32' ...
+2026-10-07 17:42:51.189 -04:00 [DBG] Attempting to bind parameter 'pageNumber' of type 'System.Int32' using the name 'pageNumber' in request data ...
+2026-10-07 17:42:51.190 -04:00 [DBG] Done attempting to bind parameter 'pageNumber' of type 'System.Int32'.
+2026-10-07 17:42:51.191 -04:00 [DBG] Done attempting to bind parameter 'pageNumber' of type 'System.Int32'.
+2026-10-07 17:42:51.193 -04:00 [DBG] Attempting to validate the bound parameter 'pageNumber' of type 'System.Int32' ...
+2026-10-07 17:42:51.194 -04:00 [DBG] Done attempting to validate the bound parameter 'pageNumber' of type 'System.Int32'.
+2026-10-07 17:42:51.196 -04:00 [DBG] Attempting to bind parameter 'pageSize' of type 'System.Int32' ...
+2026-10-07 17:42:51.198 -04:00 [DBG] Attempting to bind parameter 'pageSize' of type 'System.Int32' using the name 'pageSize' in request data ...
+2026-10-07 17:42:51.201 -04:00 [DBG] Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+2026-10-07 17:42:51.203 -04:00 [DBG] Done attempting to bind parameter 'pageSize' of type 'System.Int32'.
+2026-10-07 17:42:51.204 -04:00 [DBG] Attempting to validate the bound parameter 'pageSize' of type 'System.Int32' ...
+2026-10-07 17:42:51.205 -04:00 [DBG] Done attempting to validate the bound parameter 'pageSize' of type 'System.Int32'.
+2026-10-07 17:42:51.207 -04:00 [DBG] Entity Framework Core 8.0.11 initialized 'PostDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:8.0.11+52a6b9f2ddd23fcabd1c673b4a2e273495129481' with options: None
+2026-10-07 17:42:51.210 -04:00 [DBG] Creating DbConnection.
+2026-10-07 17:42:51.212 -04:00 [DBG] Created DbConnection. (1ms).
+2026-10-07 17:42:51.213 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:42:51.263 -04:00 [DBG] Opened connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:42:51.266 -04:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2026-10-07 17:42:51.269 -04:00 [DBG] Created DbCommand for 'ExecuteReader' (2ms).
+2026-10-07 17:42:51.270 -04:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2026-10-07 17:42:51.272 -04:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Posts" AS p
+WHERE NOT (p."IsDeleted")
+2026-10-07 17:42:51.277 -04:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Posts" AS p
+WHERE NOT (p."IsDeleted")
+2026-10-07 17:42:51.281 -04:00 [DBG] Closing data reader to 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:42:51.283 -04:00 [DBG] A data reader for 'posts' on server 'tcp://localhost:5432' is being disposed after spending 2ms reading results.
+2026-10-07 17:42:51.288 -04:00 [DBG] Closing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:42:51.289 -04:00 [DBG] Closed connection to database 'posts' on server 'tcp://localhost:5432' (1ms).
+2026-10-07 17:42:51.291 -04:00 [DBG] Opening connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:42:51.293 -04:00 [DBG] Opened connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:42:51.294 -04:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2026-10-07 17:42:51.295 -04:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2026-10-07 17:42:51.297 -04:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2026-10-07 17:42:51.300 -04:00 [DBG] Executing DbCommand [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."AuthorId", p."CommentCount", p."Content", p."CreatedAt", p."IsDeleted", p."LikeCount"
+FROM "Posts" AS p
+WHERE NOT (p."IsDeleted")
+ORDER BY p."CreatedAt" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2026-10-07 17:42:51.314 -04:00 [INF] Executed DbCommand (14ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."AuthorId", p."CommentCount", p."Content", p."CreatedAt", p."IsDeleted", p."LikeCount"
+FROM "Posts" AS p
+WHERE NOT (p."IsDeleted")
+ORDER BY p."CreatedAt" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2026-10-07 17:42:51.317 -04:00 [DBG] Context 'PostDbContext' started tracking 'Post' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-10-07 17:42:51.320 -04:00 [DBG] Closing data reader to 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:42:51.321 -04:00 [DBG] A data reader for 'posts' on server 'tcp://localhost:5432' is being disposed after spending 5ms reading results.
+2026-10-07 17:42:51.324 -04:00 [DBG] Closing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:42:51.326 -04:00 [DBG] Closed connection to database 'posts' on server 'tcp://localhost:5432' (2ms).
+2026-10-07 17:42:51.330 -04:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2026-10-07 17:42:51.335 -04:00 [DBG] No information found on request to perform content negotiation.
+2026-10-07 17:42:51.336 -04:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2026-10-07 17:42:51.338 -04:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2026-10-07 17:42:51.340 -04:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2026-10-07 17:42:51.344 -04:00 [INF] Executing OkObjectResult, writing value of type 'PostService.Models.PagedResult`1[[PostService.Models.PostResponseDto, PostService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-07 17:42:51.346 -04:00 [INF] Executed action PostService.Controller.PostsController.GetFeed (PostService) in 162.1065ms
+2026-10-07 17:42:51.349 -04:00 [INF] Executed endpoint 'PostService.Controller.PostsController.GetFeed (PostService)'
+2026-10-07 17:42:51.352 -04:00 [INF] HTTP GET /api/Posts/feed responded 200 in 184.7149 ms
+2026-10-07 17:42:51.355 -04:00 [DBG] Connection id "0HNP4NCGO1KD6" completed keep alive response.
+2026-10-07 17:42:51.356 -04:00 [DBG] 'PostDbContext' disposed.
+2026-10-07 17:42:51.357 -04:00 [DBG] Disposing connection to database 'posts' on server 'tcp://localhost:5432'.
+2026-10-07 17:42:51.359 -04:00 [DBG] Disposed connection to database 'posts' on server 'tcp://localhost:5432' (1ms).
+2026-10-07 17:42:51.361 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/api/Posts/feed?pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 207.3696ms

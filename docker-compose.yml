@@ -1,0 +1,167 @@
+version: '3.8'
+ 
+services:
+  # PostgreSQL for User Service
+  postgres-user:
+    image: postgres:15-alpine
+    container_name: postgres-user
+    environment:
+      POSTGRES_DB: users
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_user_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - social-network
+ 
+  # PostgreSQL for Post Service
+  postgres-post:
+    image: postgres:15-alpine
+    container_name: postgres-post
+    environment:
+      POSTGRES_DB: posts
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_post_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - social-network
+ 
+  # PostgreSQL for Notification Service
+  postgres-notification:
+    image: postgres:15-alpine
+    container_name: postgres-notification
+    environment:
+      POSTGRES_DB: notifications
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres_notification_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - social-network
+ 
+  # API Gateway
+  api-gateway:
+    build:
+      context: ./backend/gateway/ApiGateway
+      dockerfile: Dockerfile
+    container_name: api-gateway
+    ports:
+      - "5000:5000"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5000
+      - JwtSettings__Secret=${HANoIvpq958pZSzwah2VaN/B8j9HOytGivE0yw5ZTN1roVoHSKSQPD5fkWZnUN+jQA8lx6OpkFU+1phYEzgvMA==}
+    depends_on:
+      - postgres-user
+      - postgres-post
+      - postgres-notification
+    networks:
+      - social-network
+    restart: unless-stopped
+ 
+  # User Service
+  user-service:
+    build:
+      context: ./backend/services/user-service/UserService
+      dockerfile: Dockerfile
+    container_name: user-service
+    ports:
+      - "5001:5000"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5000
+      - ConnectionStrings__DefaultConnection=Host=postgres-user;Port=5432;Database=users;Username=postgres;Password=postgres
+      - JwtSettings__Secret=${HANoIvpq958pZSzwah2VaN/B8j9HOytGivE0yw5ZTN1roVoHSKSQPD5fkWZnUN+jQA8lx6OpkFU+1phYEzgvMA==} 
+    depends_on:
+      postgres-user:
+        condition: service_healthy
+    networks:
+      - social-network
+    restart: unless-stopped
+ 
+  # Post Service
+  post-service:
+    build:
+      context: ./backend/services/post-service/PostService
+      dockerfile: Dockerfile
+    container_name: post-service
+    ports:
+      - "5002:5000"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5000
+      - ConnectionStrings__DefaultConnection=Host=postgres-post;Port=5432;Database=posts;Username=postgres;Password=postgres
+      - JwtSettings__Secret=${HANoIvpq958pZSzwah2VaN/B8j9HOytGivE0yw5ZTN1roVoHSKSQPD5fkWZnUN+jQA8lx6OpkFU+1phYEzgvMA==} 
+    depends_on:
+      postgres-post:
+        condition: service_healthy
+    networks:
+      - social-network
+    restart: unless-stopped
+ 
+  # Notification Service (placeholder)
+  notification-service:
+    build:
+      context: ./backend/services/notification-service/NotificationService
+      dockerfile: Dockerfile
+    container_name: notification-service
+    ports:
+      - "5003:5000"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5000
+      - ConnectionStrings__DefaultConnection=Host=postgres-notification;Port=5432;Database=notifications;Username=postgres;Password=postgres
+      - JwtSettings__Secret=${HANoIvpq958pZSzwah2VaN/B8j9HOytGivE0yw5ZTN1roVoHSKSQPD5fkWZnUN+jQA8lx6OpkFU+1phYEzgvMA==}
+    depends_on:
+      postgres-notification:
+        condition: service_healthy
+    networks:
+      - social-network
+    restart: unless-stopped
+ 
+  # Comment Service (placeholder)
+  comment-service:
+    build:
+      context: ./backend/services/comment-service/CommentService
+      dockerfile: Dockerfile
+    container_name: comment-service
+    ports:
+      - "5004:5000"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5000
+      - JwtSettings__Secret=${HANoIvpq958pZSzwah2VaN/B8j9HOytGivE0yw5ZTN1roVoHSKSQPD5fkWZnUN+jQA8lx6OpkFU+1phYEzgvMA==}
+    networks:
+      - social-network
+    restart: unless-stopped
+ 
+volumes:
+  postgres_user_data:
+  postgres_post_data:
+  postgres_notification_data:
+ 
+networks:
+  social-network:
+    driver: bridge

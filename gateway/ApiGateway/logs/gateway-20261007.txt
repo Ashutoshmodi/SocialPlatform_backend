@@ -1,0 +1,210 @@
+2026-10-07 17:37:03.671 -04:00 [DBG] Hosting starting
+2026-10-07 17:37:03.738 -04:00 [INF] User profile is available. Using 'C:\Users\ashut\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-07 17:37:03.747 -04:00 [DBG] Reading data from file 'C:\Users\ashut\AppData\Local\ASP.NET\DataProtection-Keys\key-1aefe2f7-a78f-402e-8cca-a7efaaf710db.xml'.
+2026-10-07 17:37:03.767 -04:00 [DBG] Reading data from file 'C:\Users\ashut\AppData\Local\ASP.NET\DataProtection-Keys\key-5f7358ee-6761-44e0-a4ec-3ff3e2cb93b3.xml'.
+2026-10-07 17:37:03.769 -04:00 [DBG] Reading data from file 'C:\Users\ashut\AppData\Local\ASP.NET\DataProtection-Keys\key-f49fc337-19c9-4efe-9e8d-e9196b0d62ea.xml'.
+2026-10-07 17:37:03.777 -04:00 [DBG] Found key {1aefe2f7-a78f-402e-8cca-a7efaaf710db}.
+2026-10-07 17:37:03.786 -04:00 [DBG] Found key {5f7358ee-6761-44e0-a4ec-3ff3e2cb93b3}.
+2026-10-07 17:37:03.787 -04:00 [DBG] Found key {f49fc337-19c9-4efe-9e8d-e9196b0d62ea}.
+2026-10-07 17:37:03.792 -04:00 [DBG] Considering key {1aefe2f7-a78f-402e-8cca-a7efaaf710db} with expiration date 2026-12-31 15:29:51Z as default key.
+2026-10-07 17:37:03.796 -04:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2026-10-07 17:37:03.798 -04:00 [DBG] Decrypting secret element using Windows DPAPI.
+2026-10-07 17:37:03.800 -04:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2026-10-07 17:37:03.802 -04:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2026-10-07 17:37:03.805 -04:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2026-10-07 17:37:03.807 -04:00 [DBG] Using key {1aefe2f7-a78f-402e-8cca-a7efaaf710db} as the default key.
+2026-10-07 17:37:03.808 -04:00 [DBG] Key ring with default key {1aefe2f7-a78f-402e-8cca-a7efaaf710db} was loaded during application startup.
+2026-10-07 17:37:03.921 -04:00 [INF] Now listening on: http://localhost:5000
+2026-10-07 17:37:03.922 -04:00 [DBG] Loaded hosting startup assembly ApiGateway
+2026-10-07 17:37:03.923 -04:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2026-10-07 17:37:03.924 -04:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2026-10-07 17:37:03.924 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-07 17:37:03.925 -04:00 [INF] Hosting environment: Development
+2026-10-07 17:37:03.926 -04:00 [INF] Content root path: C:\Users\ashut\source\repos\SocialPlatform\backend\gateway\ApiGateway
+2026-10-07 17:37:03.926 -04:00 [DBG] Hosting started
+2026-10-07 17:38:12.136 -04:00 [DBG] Connection id "0HNP4ND4OPGHN" accepted.
+2026-10-07 17:38:12.140 -04:00 [DBG] Connection id "0HNP4ND4OPGHN" started.
+2026-10-07 17:38:12.194 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/users/auth/register - application/json 68
+2026-10-07 17:38:12.222 -04:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2026-10-07 17:38:12.382 -04:00 [DBG] No candidates found for the request path '/api/users/auth/register'
+2026-10-07 17:38:12.386 -04:00 [DBG] Request did not match any endpoints
+2026-10-07 17:38:12.396 -04:00 [DBG] The request has an origin header: 'http://localhost:3000'.
+2026-10-07 17:38:12.400 -04:00 [INF] CORS policy execution successful.
+2026-10-07 17:38:12.423 -04:00 [INF] HTTP POST /api/users/auth/register 4fd0cd1c-2514-4cae-b70c-79459f6c91e0 - Request started
+2026-10-07 17:38:12.523 -04:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-10-07 17:38:12.554 -04:00 [DBG] requestId: 4fd0cd1c-2514-4cae-b70c-79459f6c91e0, previousRequestId: No PreviousRequestId, message: 'ocelot pipeline started'
+2026-10-07 17:38:12.586 -04:00 [DBG] requestId: 4fd0cd1c-2514-4cae-b70c-79459f6c91e0, previousRequestId: No PreviousRequestId, message: 'Upstream URL path is '/api/users/auth/register'.'
+2026-10-07 17:38:12.665 -04:00 [DBG] requestId: 4fd0cd1c-2514-4cae-b70c-79459f6c91e0, previousRequestId: No PreviousRequestId, message: 'downstream templates are /api/{everything}'
+2026-10-07 17:38:12.717 -04:00 [INF] requestId: 4fd0cd1c-2514-4cae-b70c-79459f6c91e0, previousRequestId: No PreviousRequestId, message: 'No authentication needed for path '/api/users/auth/register'.'
+2026-10-07 17:38:12.724 -04:00 [INF] requestId: 4fd0cd1c-2514-4cae-b70c-79459f6c91e0, previousRequestId: No PreviousRequestId, message: '/api/{everything} route does not require user to be authorized'
+2026-10-07 17:38:12.754 -04:00 [DBG] requestId: 4fd0cd1c-2514-4cae-b70c-79459f6c91e0, previousRequestId: No PreviousRequestId, message: 'Downstream url is http://localhost:5001/api/auth/register'
+2026-10-07 17:38:12.898 -04:00 [DBG] Connection id "0HNP4ND4OPGHN", Request id "0HNP4ND4OPGHN:00000001": started reading request body.
+2026-10-07 17:38:12.901 -04:00 [DBG] Connection id "0HNP4ND4OPGHN", Request id "0HNP4ND4OPGHN:00000001": done reading request body.
+2026-10-07 17:38:15.185 -04:00 [INF] requestId: 4fd0cd1c-2514-4cae-b70c-79459f6c91e0, previousRequestId: No PreviousRequestId, message: '201 (Created) status code of request URI: http://localhost:5001/api/auth/register.'
+2026-10-07 17:38:15.187 -04:00 [DBG] requestId: 4fd0cd1c-2514-4cae-b70c-79459f6c91e0, previousRequestId: No PreviousRequestId, message: 'setting http response message'
+2026-10-07 17:38:15.208 -04:00 [DBG] requestId: 4fd0cd1c-2514-4cae-b70c-79459f6c91e0, previousRequestId: No PreviousRequestId, message: 'no pipeline errors, setting and returning completed response'
+2026-10-07 17:38:15.241 -04:00 [DBG] requestId: 4fd0cd1c-2514-4cae-b70c-79459f6c91e0, previousRequestId: No PreviousRequestId, message: 'ocelot pipeline finished'
+2026-10-07 17:38:15.245 -04:00 [INF] HTTP POST /api/users/auth/register 201 2823ms 4fd0cd1c-2514-4cae-b70c-79459f6c91e0 - Request completed
+2026-10-07 17:38:15.253 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/users/auth/register - 201 null application/json; charset=utf-8 3069.4856ms
+2026-10-07 17:38:15.255 -04:00 [DBG] Connection id "0HNP4ND4OPGHN" received FIN.
+2026-10-07 17:38:15.263 -04:00 [DBG] Connection id "0HNP4ND4OPGHO" accepted.
+2026-10-07 17:38:15.269 -04:00 [DBG] Connection id "0HNP4ND4OPGHO" started.
+2026-10-07 17:38:15.270 -04:00 [DBG] Connection id "0HNP4ND4OPGHN" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-10-07 17:38:15.272 -04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/api/users/auth/register, Response status code: 201
+2026-10-07 17:38:15.274 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/users/auth/login - application/json 49
+2026-10-07 17:38:15.275 -04:00 [DBG] Connection id "0HNP4ND4OPGHN" disconnecting.
+2026-10-07 17:38:15.280 -04:00 [DBG] No candidates found for the request path '/api/users/auth/login'
+2026-10-07 17:38:15.282 -04:00 [DBG] Connection id "0HNP4ND4OPGHN" stopped.
+2026-10-07 17:38:15.283 -04:00 [DBG] Request did not match any endpoints
+2026-10-07 17:38:15.286 -04:00 [DBG] The request has an origin header: 'http://localhost:3000'.
+2026-10-07 17:38:15.288 -04:00 [INF] CORS policy execution successful.
+2026-10-07 17:38:15.290 -04:00 [INF] HTTP POST /api/users/auth/login 6737eade-12c1-4e9c-b304-94af1ec14c16 - Request started
+2026-10-07 17:38:15.295 -04:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-10-07 17:38:15.299 -04:00 [DBG] requestId: 6737eade-12c1-4e9c-b304-94af1ec14c16, previousRequestId: No PreviousRequestId, message: 'ocelot pipeline started'
+2026-10-07 17:38:15.300 -04:00 [DBG] requestId: 6737eade-12c1-4e9c-b304-94af1ec14c16, previousRequestId: No PreviousRequestId, message: 'Upstream URL path is '/api/users/auth/login'.'
+2026-10-07 17:38:15.302 -04:00 [DBG] requestId: 6737eade-12c1-4e9c-b304-94af1ec14c16, previousRequestId: No PreviousRequestId, message: 'downstream templates are /api/{everything}'
+2026-10-07 17:38:15.305 -04:00 [INF] requestId: 6737eade-12c1-4e9c-b304-94af1ec14c16, previousRequestId: No PreviousRequestId, message: 'No authentication needed for path '/api/users/auth/login'.'
+2026-10-07 17:38:15.306 -04:00 [INF] requestId: 6737eade-12c1-4e9c-b304-94af1ec14c16, previousRequestId: No PreviousRequestId, message: '/api/{everything} route does not require user to be authorized'
+2026-10-07 17:38:15.308 -04:00 [DBG] requestId: 6737eade-12c1-4e9c-b304-94af1ec14c16, previousRequestId: No PreviousRequestId, message: 'Downstream url is http://localhost:5001/api/auth/login'
+2026-10-07 17:38:15.321 -04:00 [DBG] Connection id "0HNP4ND4OPGHO", Request id "0HNP4ND4OPGHO:00000001": started reading request body.
+2026-10-07 17:38:15.323 -04:00 [DBG] Connection id "0HNP4ND4OPGHO", Request id "0HNP4ND4OPGHO:00000001": done reading request body.
+2026-10-07 17:38:16.288 -04:00 [INF] requestId: 6737eade-12c1-4e9c-b304-94af1ec14c16, previousRequestId: No PreviousRequestId, message: '200 (OK) status code of request URI: http://localhost:5001/api/auth/login.'
+2026-10-07 17:38:16.290 -04:00 [DBG] requestId: 6737eade-12c1-4e9c-b304-94af1ec14c16, previousRequestId: No PreviousRequestId, message: 'setting http response message'
+2026-10-07 17:38:16.292 -04:00 [DBG] requestId: 6737eade-12c1-4e9c-b304-94af1ec14c16, previousRequestId: No PreviousRequestId, message: 'no pipeline errors, setting and returning completed response'
+2026-10-07 17:38:16.294 -04:00 [DBG] requestId: 6737eade-12c1-4e9c-b304-94af1ec14c16, previousRequestId: No PreviousRequestId, message: 'ocelot pipeline finished'
+2026-10-07 17:38:16.298 -04:00 [INF] HTTP POST /api/users/auth/login 200 1007ms 6737eade-12c1-4e9c-b304-94af1ec14c16 - Request completed
+2026-10-07 17:38:16.303 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/users/auth/login - 200 null application/json; charset=utf-8 1029.4763ms
+2026-10-07 17:38:16.304 -04:00 [DBG] Connection id "0HNP4ND4OPGHO" received FIN.
+2026-10-07 17:38:16.314 -04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/api/users/auth/login, Response status code: 200
+2026-10-07 17:38:16.315 -04:00 [DBG] Connection id "0HNP4ND4OPGHO" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-10-07 17:38:16.320 -04:00 [DBG] Connection id "0HNP4ND4OPGHO" disconnecting.
+2026-10-07 17:38:16.323 -04:00 [DBG] Connection id "0HNP4ND4OPGHO" stopped.
+2026-10-07 17:38:16.449 -04:00 [DBG] Connection id "0HNP4ND4OPGHP" accepted.
+2026-10-07 17:38:16.453 -04:00 [DBG] Connection id "0HNP4ND4OPGHP" started.
+2026-10-07 17:38:16.458 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/posts/feed?pageNumber=1&pageSize=10 - null null
+2026-10-07 17:38:16.475 -04:00 [DBG] No candidates found for the request path '/api/posts/feed'
+2026-10-07 17:38:16.476 -04:00 [DBG] Request did not match any endpoints
+2026-10-07 17:38:16.478 -04:00 [INF] HTTP GET /api/posts/feed 6646565c-08ed-450c-8c81-ba455c773c4c - Request started
+2026-10-07 17:38:16.580 -04:00 [DBG] Successfully validated the token.
+2026-10-07 17:38:16.584 -04:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2026-10-07 17:38:16.588 -04:00 [DBG] requestId: 6646565c-08ed-450c-8c81-ba455c773c4c, previousRequestId: No PreviousRequestId, message: 'ocelot pipeline started'
+2026-10-07 17:38:16.589 -04:00 [DBG] requestId: 6646565c-08ed-450c-8c81-ba455c773c4c, previousRequestId: No PreviousRequestId, message: 'Upstream URL path is '/api/posts/feed'.'
+2026-10-07 17:38:16.590 -04:00 [DBG] requestId: 6646565c-08ed-450c-8c81-ba455c773c4c, previousRequestId: No PreviousRequestId, message: 'downstream templates are /api/posts/{everything}'
+2026-10-07 17:38:16.591 -04:00 [INF] requestId: 6646565c-08ed-450c-8c81-ba455c773c4c, previousRequestId: No PreviousRequestId, message: 'No authentication needed for path '/api/posts/feed'.'
+2026-10-07 17:38:16.592 -04:00 [INF] requestId: 6646565c-08ed-450c-8c81-ba455c773c4c, previousRequestId: No PreviousRequestId, message: '/api/posts/{everything} route does not require user to be authorized'
+2026-10-07 17:38:16.595 -04:00 [DBG] requestId: 6646565c-08ed-450c-8c81-ba455c773c4c, previousRequestId: No PreviousRequestId, message: 'Downstream url is http://localhost:5002/api/posts/feed?pageNumber=1&pageSize=10'
+2026-10-07 17:38:18.140 -04:00 [INF] requestId: 6646565c-08ed-450c-8c81-ba455c773c4c, previousRequestId: No PreviousRequestId, message: '200 (OK) status code of request URI: http://localhost:5002/api/posts/feed?pageNumber=1&pageSize=10.'
+2026-10-07 17:38:18.141 -04:00 [DBG] requestId: 6646565c-08ed-450c-8c81-ba455c773c4c, previousRequestId: No PreviousRequestId, message: 'setting http response message'
+2026-10-07 17:38:18.142 -04:00 [DBG] requestId: 6646565c-08ed-450c-8c81-ba455c773c4c, previousRequestId: No PreviousRequestId, message: 'no pipeline errors, setting and returning completed response'
+2026-10-07 17:38:18.162 -04:00 [DBG] requestId: 6646565c-08ed-450c-8c81-ba455c773c4c, previousRequestId: No PreviousRequestId, message: 'ocelot pipeline finished'
+2026-10-07 17:38:18.170 -04:00 [INF] HTTP GET /api/posts/feed 200 1691ms 6646565c-08ed-450c-8c81-ba455c773c4c - Request completed
+2026-10-07 17:38:18.178 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/posts/feed?pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 1720.2391ms
+2026-10-07 17:38:18.179 -04:00 [DBG] Connection id "0HNP4ND4OPGHP" received FIN.
+2026-10-07 17:38:18.187 -04:00 [DBG] Connection id "0HNP4ND4OPGHP" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-10-07 17:38:18.191 -04:00 [DBG] Connection id "0HNP4ND4OPGHP" disconnecting.
+2026-10-07 17:38:18.184 -04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/api/posts/feed, Response status code: 200
+2026-10-07 17:38:18.196 -04:00 [DBG] Connection id "0HNP4ND4OPGHP" stopped.
+2026-10-07 17:39:20.822 -04:00 [DBG] Connection id "0HNP4ND4OPGHQ" accepted.
+2026-10-07 17:39:20.833 -04:00 [DBG] Connection id "0HNP4ND4OPGHQ" started.
+2026-10-07 17:39:20.839 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/posts - application/json 320
+2026-10-07 17:39:20.858 -04:00 [DBG] No candidates found for the request path '/api/posts'
+2026-10-07 17:39:20.864 -04:00 [DBG] Request did not match any endpoints
+2026-10-07 17:39:20.868 -04:00 [DBG] The request has an origin header: 'http://localhost:3000'.
+2026-10-07 17:39:20.873 -04:00 [INF] CORS policy execution successful.
+2026-10-07 17:39:20.878 -04:00 [INF] HTTP POST /api/posts ef9f6ba8-0721-47ff-b277-14befd7b4847 - Request started
+2026-10-07 17:39:20.886 -04:00 [DBG] Successfully validated the token.
+2026-10-07 17:39:20.889 -04:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2026-10-07 17:39:20.893 -04:00 [DBG] requestId: ef9f6ba8-0721-47ff-b277-14befd7b4847, previousRequestId: No PreviousRequestId, message: 'ocelot pipeline started'
+2026-10-07 17:39:20.895 -04:00 [DBG] requestId: ef9f6ba8-0721-47ff-b277-14befd7b4847, previousRequestId: No PreviousRequestId, message: 'Upstream URL path is '/api/posts'.'
+2026-10-07 17:39:20.900 -04:00 [DBG] requestId: ef9f6ba8-0721-47ff-b277-14befd7b4847, previousRequestId: No PreviousRequestId, message: 'downstream templates are /api/posts'
+2026-10-07 17:39:20.902 -04:00 [INF] requestId: ef9f6ba8-0721-47ff-b277-14befd7b4847, previousRequestId: No PreviousRequestId, message: 'No authentication needed for path '/api/posts'.'
+2026-10-07 17:39:20.904 -04:00 [INF] requestId: ef9f6ba8-0721-47ff-b277-14befd7b4847, previousRequestId: No PreviousRequestId, message: '/api/posts route does not require user to be authorized'
+2026-10-07 17:39:20.906 -04:00 [DBG] requestId: ef9f6ba8-0721-47ff-b277-14befd7b4847, previousRequestId: No PreviousRequestId, message: 'Downstream url is http://localhost:5002/api/posts'
+2026-10-07 17:39:20.913 -04:00 [DBG] Connection id "0HNP4ND4OPGHQ", Request id "0HNP4ND4OPGHQ:00000001": started reading request body.
+2026-10-07 17:39:20.914 -04:00 [DBG] Connection id "0HNP4ND4OPGHQ", Request id "0HNP4ND4OPGHQ:00000001": done reading request body.
+2026-10-07 17:39:21.578 -04:00 [INF] requestId: ef9f6ba8-0721-47ff-b277-14befd7b4847, previousRequestId: No PreviousRequestId, message: '201 (Created) status code of request URI: http://localhost:5002/api/posts.'
+2026-10-07 17:39:21.580 -04:00 [DBG] requestId: ef9f6ba8-0721-47ff-b277-14befd7b4847, previousRequestId: No PreviousRequestId, message: 'setting http response message'
+2026-10-07 17:39:21.582 -04:00 [DBG] requestId: ef9f6ba8-0721-47ff-b277-14befd7b4847, previousRequestId: No PreviousRequestId, message: 'no pipeline errors, setting and returning completed response'
+2026-10-07 17:39:21.593 -04:00 [DBG] requestId: ef9f6ba8-0721-47ff-b277-14befd7b4847, previousRequestId: No PreviousRequestId, message: 'ocelot pipeline finished'
+2026-10-07 17:39:21.595 -04:00 [INF] HTTP POST /api/posts 201 717ms ef9f6ba8-0721-47ff-b277-14befd7b4847 - Request completed
+2026-10-07 17:39:21.599 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/posts - 201 null application/json; charset=utf-8 760.9572ms
+2026-10-07 17:39:21.615 -04:00 [DBG] Connection id "0HNP4ND4OPGHR" accepted.
+2026-10-07 17:39:21.601 -04:00 [DBG] Connection id "0HNP4ND4OPGHQ" received FIN.
+2026-10-07 17:39:21.621 -04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/api/posts, Response status code: 201
+2026-10-07 17:39:21.622 -04:00 [DBG] Connection id "0HNP4ND4OPGHR" started.
+2026-10-07 17:39:21.624 -04:00 [DBG] Connection id "0HNP4ND4OPGHQ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-10-07 17:39:21.627 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/posts/feed?pageNumber=1&pageSize=10 - null null
+2026-10-07 17:39:21.628 -04:00 [DBG] Connection id "0HNP4ND4OPGHQ" disconnecting.
+2026-10-07 17:39:21.630 -04:00 [DBG] No candidates found for the request path '/api/posts/feed'
+2026-10-07 17:39:21.631 -04:00 [DBG] Connection id "0HNP4ND4OPGHQ" stopped.
+2026-10-07 17:39:21.632 -04:00 [DBG] Request did not match any endpoints
+2026-10-07 17:39:21.634 -04:00 [INF] HTTP GET /api/posts/feed 9c4affc6-c0c0-4bbf-a02e-d8f7d532c169 - Request started
+2026-10-07 17:39:21.636 -04:00 [DBG] Successfully validated the token.
+2026-10-07 17:39:21.637 -04:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2026-10-07 17:39:21.639 -04:00 [DBG] requestId: 9c4affc6-c0c0-4bbf-a02e-d8f7d532c169, previousRequestId: No PreviousRequestId, message: 'ocelot pipeline started'
+2026-10-07 17:39:21.640 -04:00 [DBG] requestId: 9c4affc6-c0c0-4bbf-a02e-d8f7d532c169, previousRequestId: No PreviousRequestId, message: 'Upstream URL path is '/api/posts/feed'.'
+2026-10-07 17:39:21.641 -04:00 [DBG] requestId: 9c4affc6-c0c0-4bbf-a02e-d8f7d532c169, previousRequestId: No PreviousRequestId, message: 'downstream templates are /api/posts/{everything}'
+2026-10-07 17:39:21.642 -04:00 [INF] requestId: 9c4affc6-c0c0-4bbf-a02e-d8f7d532c169, previousRequestId: No PreviousRequestId, message: 'No authentication needed for path '/api/posts/feed'.'
+2026-10-07 17:39:21.643 -04:00 [INF] requestId: 9c4affc6-c0c0-4bbf-a02e-d8f7d532c169, previousRequestId: No PreviousRequestId, message: '/api/posts/{everything} route does not require user to be authorized'
+2026-10-07 17:39:21.645 -04:00 [DBG] requestId: 9c4affc6-c0c0-4bbf-a02e-d8f7d532c169, previousRequestId: No PreviousRequestId, message: 'Downstream url is http://localhost:5002/api/posts/feed?pageNumber=1&pageSize=10'
+2026-10-07 17:39:21.826 -04:00 [INF] requestId: 9c4affc6-c0c0-4bbf-a02e-d8f7d532c169, previousRequestId: No PreviousRequestId, message: '200 (OK) status code of request URI: http://localhost:5002/api/posts/feed?pageNumber=1&pageSize=10.'
+2026-10-07 17:39:21.827 -04:00 [DBG] requestId: 9c4affc6-c0c0-4bbf-a02e-d8f7d532c169, previousRequestId: No PreviousRequestId, message: 'setting http response message'
+2026-10-07 17:39:21.829 -04:00 [DBG] requestId: 9c4affc6-c0c0-4bbf-a02e-d8f7d532c169, previousRequestId: No PreviousRequestId, message: 'no pipeline errors, setting and returning completed response'
+2026-10-07 17:39:21.837 -04:00 [DBG] requestId: 9c4affc6-c0c0-4bbf-a02e-d8f7d532c169, previousRequestId: No PreviousRequestId, message: 'ocelot pipeline finished'
+2026-10-07 17:39:21.839 -04:00 [INF] HTTP GET /api/posts/feed 200 204ms 9c4affc6-c0c0-4bbf-a02e-d8f7d532c169 - Request completed
+2026-10-07 17:39:21.852 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/posts/feed?pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 225.2966ms
+2026-10-07 17:39:21.853 -04:00 [DBG] Connection id "0HNP4ND4OPGHR" received FIN.
+2026-10-07 17:39:21.858 -04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/api/posts/feed, Response status code: 200
+2026-10-07 17:39:21.859 -04:00 [DBG] Connection id "0HNP4ND4OPGHR" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-10-07 17:39:21.864 -04:00 [DBG] Connection id "0HNP4ND4OPGHR" disconnecting.
+2026-10-07 17:39:21.866 -04:00 [DBG] Connection id "0HNP4ND4OPGHR" stopped.
+2026-10-07 17:39:28.127 -04:00 [DBG] Connection id "0HNP4ND4OPGHS" accepted.
+2026-10-07 17:39:28.131 -04:00 [DBG] Connection id "0HNP4ND4OPGHS" started.
+2026-10-07 17:39:28.134 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/users/auth/1779ced9-ec08-4341-bc1d-d78775fd4596 - null null
+2026-10-07 17:39:28.140 -04:00 [DBG] No candidates found for the request path '/api/users/auth/1779ced9-ec08-4341-bc1d-d78775fd4596'
+2026-10-07 17:39:28.142 -04:00 [DBG] Request did not match any endpoints
+2026-10-07 17:39:28.143 -04:00 [INF] HTTP GET /api/users/auth/1779ced9-ec08-4341-bc1d-d78775fd4596 2b427ac2-5594-441c-a718-7f803fd3d4f2 - Request started
+2026-10-07 17:39:28.147 -04:00 [DBG] Successfully validated the token.
+2026-10-07 17:39:28.148 -04:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2026-10-07 17:39:28.149 -04:00 [DBG] requestId: 2b427ac2-5594-441c-a718-7f803fd3d4f2, previousRequestId: No PreviousRequestId, message: 'ocelot pipeline started'
+2026-10-07 17:39:28.150 -04:00 [DBG] requestId: 2b427ac2-5594-441c-a718-7f803fd3d4f2, previousRequestId: No PreviousRequestId, message: 'Upstream URL path is '/api/users/auth/1779ced9-ec08-4341-bc1d-d78775fd4596'.'
+2026-10-07 17:39:28.151 -04:00 [DBG] requestId: 2b427ac2-5594-441c-a718-7f803fd3d4f2, previousRequestId: No PreviousRequestId, message: 'downstream templates are /api/{everything}'
+2026-10-07 17:39:28.152 -04:00 [INF] requestId: 2b427ac2-5594-441c-a718-7f803fd3d4f2, previousRequestId: No PreviousRequestId, message: 'No authentication needed for path '/api/users/auth/1779ced9-ec08-4341-bc1d-d78775fd4596'.'
+2026-10-07 17:39:28.154 -04:00 [INF] requestId: 2b427ac2-5594-441c-a718-7f803fd3d4f2, previousRequestId: No PreviousRequestId, message: '/api/{everything} route does not require user to be authorized'
+2026-10-07 17:39:28.157 -04:00 [DBG] requestId: 2b427ac2-5594-441c-a718-7f803fd3d4f2, previousRequestId: No PreviousRequestId, message: 'Downstream url is http://localhost:5001/api/auth/1779ced9-ec08-4341-bc1d-d78775fd4596'
+2026-10-07 17:39:28.318 -04:00 [INF] requestId: 2b427ac2-5594-441c-a718-7f803fd3d4f2, previousRequestId: No PreviousRequestId, message: '200 (OK) status code of request URI: http://localhost:5001/api/auth/1779ced9-ec08-4341-bc1d-d78775fd4596.'
+2026-10-07 17:39:28.319 -04:00 [DBG] requestId: 2b427ac2-5594-441c-a718-7f803fd3d4f2, previousRequestId: No PreviousRequestId, message: 'setting http response message'
+2026-10-07 17:39:28.320 -04:00 [DBG] requestId: 2b427ac2-5594-441c-a718-7f803fd3d4f2, previousRequestId: No PreviousRequestId, message: 'no pipeline errors, setting and returning completed response'
+2026-10-07 17:39:28.325 -04:00 [DBG] requestId: 2b427ac2-5594-441c-a718-7f803fd3d4f2, previousRequestId: No PreviousRequestId, message: 'ocelot pipeline finished'
+2026-10-07 17:39:28.327 -04:00 [INF] HTTP GET /api/users/auth/1779ced9-ec08-4341-bc1d-d78775fd4596 200 183ms 2b427ac2-5594-441c-a718-7f803fd3d4f2 - Request completed
+2026-10-07 17:39:28.330 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/users/auth/1779ced9-ec08-4341-bc1d-d78775fd4596 - 200 null application/json; charset=utf-8 195.5965ms
+2026-10-07 17:39:28.330 -04:00 [DBG] Connection id "0HNP4ND4OPGHS" received FIN.
+2026-10-07 17:39:28.337 -04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/api/users/auth/1779ced9-ec08-4341-bc1d-d78775fd4596, Response status code: 200
+2026-10-07 17:39:28.338 -04:00 [DBG] Connection id "0HNP4ND4OPGHS" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-10-07 17:39:28.342 -04:00 [DBG] Connection id "0HNP4ND4OPGHS" disconnecting.
+2026-10-07 17:39:28.343 -04:00 [DBG] Connection id "0HNP4ND4OPGHS" stopped.
+2026-10-07 17:39:32.327 -04:00 [DBG] Connection id "0HNP4ND4OPGHT" accepted.
+2026-10-07 17:39:32.332 -04:00 [DBG] Connection id "0HNP4ND4OPGHT" started.
+2026-10-07 17:39:32.334 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/posts/feed?pageNumber=1&pageSize=10 - null null
+2026-10-07 17:39:32.344 -04:00 [DBG] No candidates found for the request path '/api/posts/feed'
+2026-10-07 17:39:32.347 -04:00 [DBG] Request did not match any endpoints
+2026-10-07 17:39:32.351 -04:00 [INF] HTTP GET /api/posts/feed 5ca245d1-0b2c-4f1b-86bb-4da25be75340 - Request started
+2026-10-07 17:39:32.355 -04:00 [DBG] Successfully validated the token.
+2026-10-07 17:39:32.357 -04:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2026-10-07 17:39:32.364 -04:00 [DBG] requestId: 5ca245d1-0b2c-4f1b-86bb-4da25be75340, previousRequestId: No PreviousRequestId, message: 'ocelot pipeline started'
+2026-10-07 17:39:32.367 -04:00 [DBG] requestId: 5ca245d1-0b2c-4f1b-86bb-4da25be75340, previousRequestId: No PreviousRequestId, message: 'Upstream URL path is '/api/posts/feed'.'
+2026-10-07 17:39:32.368 -04:00 [DBG] requestId: 5ca245d1-0b2c-4f1b-86bb-4da25be75340, previousRequestId: No PreviousRequestId, message: 'downstream templates are /api/posts/{everything}'
+2026-10-07 17:39:32.370 -04:00 [INF] requestId: 5ca245d1-0b2c-4f1b-86bb-4da25be75340, previousRequestId: No PreviousRequestId, message: 'No authentication needed for path '/api/posts/feed'.'
+2026-10-07 17:39:32.372 -04:00 [INF] requestId: 5ca245d1-0b2c-4f1b-86bb-4da25be75340, previousRequestId: No PreviousRequestId, message: '/api/posts/{everything} route does not require user to be authorized'
+2026-10-07 17:39:32.373 -04:00 [DBG] requestId: 5ca245d1-0b2c-4f1b-86bb-4da25be75340, previousRequestId: No PreviousRequestId, message: 'Downstream url is http://localhost:5002/api/posts/feed?pageNumber=1&pageSize=10'
+2026-10-07 17:39:32.513 -04:00 [INF] requestId: 5ca245d1-0b2c-4f1b-86bb-4da25be75340, previousRequestId: No PreviousRequestId, message: '200 (OK) status code of request URI: http://localhost:5002/api/posts/feed?pageNumber=1&pageSize=10.'
+2026-10-07 17:39:32.516 -04:00 [DBG] requestId: 5ca245d1-0b2c-4f1b-86bb-4da25be75340, previousRequestId: No PreviousRequestId, message: 'setting http response message'
+2026-10-07 17:39:32.518 -04:00 [DBG] requestId: 5ca245d1-0b2c-4f1b-86bb-4da25be75340, previousRequestId: No PreviousRequestId, message: 'no pipeline errors, setting and returning completed response'
+2026-10-07 17:39:32.522 -04:00 [DBG] requestId: 5ca245d1-0b2c-4f1b-86bb-4da25be75340, previousRequestId: No PreviousRequestId, message: 'ocelot pipeline finished'
+2026-10-07 17:39:32.524 -04:00 [INF] HTTP GET /api/posts/feed 200 173ms 5ca245d1-0b2c-4f1b-86bb-4da25be75340 - Request completed
+2026-10-07 17:39:32.529 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/posts/feed?pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 195.091ms
+2026-10-07 17:39:32.531 -04:00 [DBG] Connection id "0HNP4ND4OPGHT" received FIN.
+2026-10-07 17:39:32.536 -04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/api/posts/feed, Response status code: 200
+2026-10-07 17:39:32.537 -04:00 [DBG] Connection id "0HNP4ND4OPGHT" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-10-07 17:39:32.542 -04:00 [DBG] Connection id "0HNP4ND4OPGHT" disconnecting.
+2026-10-07 17:39:32.544 -04:00 [DBG] Connection id "0HNP4ND4OPGHT" stopped.
