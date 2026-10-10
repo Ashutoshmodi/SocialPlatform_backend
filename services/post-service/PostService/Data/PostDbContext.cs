@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PostService.Models;
+using System;
 
 namespace PostService.Data
 {
@@ -22,6 +23,10 @@ namespace PostService.Data
                 entity.Property(e => e.AuthorId).IsRequired();
                 entity.Property(e => e.CreatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
                 entity.HasIndex(e => e.AuthorId);
+                entity.HasIndex(e => e.CreatedAt);
+
+                //"Posts by user, newest first" in one index scan
+                entity.HasIndex(e => new { e.AuthorId, e.CreatedAt });
                 entity.HasIndex(e => e.CreatedAt);
             });
         }

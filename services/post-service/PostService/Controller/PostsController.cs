@@ -1,80 +1,53 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PostService.Models;
 using PostService.Services;
 
-namespace PostService.Controller
+namespace PostService.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/posts")]
     public class PostsController : ControllerBase
     {
-        private readonly IPostService _postService;
-        private readonly ILogger<PostsController> _logger;
+        private readonly IPostService _posts;
 
-        public PostsController(IPostService postService, ILogger<PostsController> logger)
+        public PostsController(IPostService posts)
         {
-            _postService = postService;
-            _logger = logger;
+            _posts = posts;
+        }
+
+        private Guid CurrentUserId => Guid.TryParse(User.FindFirst("sub")?.Value, out var id) ? id : throw new UnauthorizedAccessException("Token has no user id");
+
+        private string CurrentUsername => User.FindFirst("unique_name")?.Value ?? "unknown";
+
+        [Authorize]
+        [HttpPost]
+        public async Task<ActionResult<PostResponseDto>> Create([FromBody] CreatePostDto dto)
+        {
+            var post = await _posts.CreatePostAsync(dto, CurrentUserId, CurrentUsername);
+            return CreatedAtAction(nameof(GetById), new { id = post.Id }, post);
         }
 
         [HttpGet("feed")]
-        public async Task<IActionResult> GetFeed([FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)
-        {
-            try
-            {
-                var feed = await _postService.GetFeedAsync(pageNumber, pageSize);
-                return Ok(feed);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Error fetching feed: {ex.Message}");
-                return StatusCode(500, new { error = "Internal server error" });
-            }
-        }
+        public Task<PagedResult<PostResponseDto>> Feed([FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10) =>
+            _posts.GetFeedAsync(pageNumber, pageSize);
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetPost(Guid id)
+        [HttpGet("user/{userId:guid}")]
+        public Task<PagedResult<PostResponseDto>> ByUser(Guid userId, [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10) =>
+            _posts.GetUserPostsAsync(userId, pageNumber, pageSize);
+
+        [HttpGet("{id:guid}")]
+        public Task<PostResponseDto> GetById(Guid id) => _posts.GetPostAsync(id);
+
+        [Authorize]
+        [HttpDelete("{id:guid}")]
+        public async Task<IActionResult> Delete(Guid id)
         {
-            try
-            {
-                var post = await _postService.GetPostAsync(id);
-                return Ok(post);
-            }
-            catch (KeyNotFoundException)
-            {
-                return NotFound(new { error = "Post not found" });
-            }
+            await _posts.DeletePostAsync(id, CurrentUserId);
+            return NoContent();
         }
 
         [HttpGet("health")]
-        public IActionResult Health()
-        {
-            return Ok(new { status = "healthy", timestamp = DateTime.UtcNow });
-        }
-
-        [Authorize]
-        [HttpPost("")]
-        public async Task<IActionResult> CreatePost([FromBody] CreatePostDto dto)
-        {
-            try
-            {
-                var userId = Guid.Parse(User.FindFirst("sub")?.Value ?? throw new UnauthorizedAccessException());
-                var username = User.FindFirst("unique_name")?.Value ?? "Unknown";
-
-                var post = await _postService.CreatePostAsync(dto, userId, username);
-                return CreatedAtAction(nameof(GetPost), new { id = post.Id }, post);
-            }
-            catch (UnauthorizedAccessException)
-            {
-                return Unauthorized(new { error = "Unauthorized" });
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Error creating post: {ex.Message}");
-                return StatusCode(500, new { error = "Internal server error" });
-            }
-        }
+        public IActionResult Health() => Ok(new { status = "healthy", timestamp = DateTime.UtcNow });
     }
 }

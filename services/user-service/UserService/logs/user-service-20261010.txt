@@ -1,0 +1,321 @@
+2026-10-10 11:47:08.184 -04:00 [INF] User Service starting...
+2026-10-10 11:47:55.582 -04:00 [WRN] Failed to determine the https port for redirect.
+2026-10-10 11:47:58.182 -04:00 [INF] User registered:c496f88c-f865-423c-8e0a-6091724851a9
+2026-10-10 11:47:58.280 -04:00 [INF] HTTP POST /api/auth/register responded 201 in 3026.3538 ms
+2026-10-10 11:47:59.603 -04:00 [INF] HTTP POST /api/auth/login responded 200 in 1086.4889 ms
+2026-10-10 11:48:00.290 -04:00 [INF] User registered:ae04eeb8-354b-48d7-a792-1218b62bfcaa
+2026-10-10 11:48:00.294 -04:00 [INF] HTTP POST /api/auth/register responded 201 in 541.7715 ms
+2026-10-10 11:48:00.681 -04:00 [INF] HTTP POST /api/auth/login responded 200 in 335.4582 ms
+2026-10-10 11:50:10.446 -04:00 [INF] User Service starting...
+2026-10-10 11:50:10.842 -04:00 [INF] HTTP PUT /api/profiles/me responded 401 in 39.2893 ms
+2026-10-10 11:50:10.960 -04:00 [WRN] Failed to determine the https port for redirect.
+2026-10-10 11:50:10.963 -04:00 [INF] HTTP POST /api/profiles//follow responded 404 in 8.6884 ms
+2026-10-10 11:50:11.035 -04:00 [INF] HTTP GET /api/profiles/ responded 404 in 0.5879 ms
+2026-10-10 11:50:11.106 -04:00 [INF] HTTP GET /api/profiles//followers responded 404 in 0.1391 ms
+2026-10-10 11:50:11.179 -04:00 [INF] HTTP POST /api/profiles//follow responded 404 in 0.1575 ms
+2026-10-10 11:50:11.259 -04:00 [INF] HTTP GET /api/profiles/search responded 401 in 2.0460 ms
+2026-10-10 11:50:12.560 -04:00 [INF] HTTP DELETE /api/profiles//follow responded 404 in 0.1957 ms
+2026-10-10 11:50:51.533 -04:00 [INF] HTTP GET /api/profiles/ responded 404 in 0.2770 ms
+2026-10-10 11:52:45.662 -04:00 [INF] HTTP GET /api/Auth/health responded 200 in 143.1503 ms
+2026-10-10 11:53:01.593 -04:00 [INF] HTTP POST /api/Auth/login responded 200 in 1549.0815 ms
+2026-10-10 11:54:00.430 -04:00 [INF] Profile cache MISS for "1779ced9-ec08-4341-bc1d-d78775fd4596", loading from database
+2026-10-10 11:54:00.700 -04:00 [ERR] Failed executing DbCommand (28ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Username", u."Email", u."Bio", u."ProfilePictureUrl", u."CreatedAt", (
+    SELECT count(*)::int
+    FROM "Follows" AS f
+    WHERE f."FolloweeId" = u."Id") AS "FollowersCount", (
+    SELECT count(*)::int
+    FROM "Follows" AS f0
+    WHERE f0."FollowerId" = u."Id") AS "FollowingCount"
+FROM "Users" AS u
+WHERE u."Id" = @__userId_0 AND u."IsActive"
+LIMIT 1
+2026-10-10 11:54:00.847 -04:00 [ERR] An exception occurred while iterating over the results of a query for context type 'UserService.Data.UserDbContext'.
+Npgsql.PostgresException (0x80004005): 42P01: relation "Follows" does not exist
+
+POSITION: 126
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "Follows" does not exist
+    Position: 126
+    File: parse_relation.c
+    Line: 1449
+    Routine: parserOpenTable
+Npgsql.PostgresException (0x80004005): 42P01: relation "Follows" does not exist
+
+POSITION: 126
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "Follows" does not exist
+    Position: 126
+    File: parse_relation.c
+    Line: 1449
+    Routine: parserOpenTable
+2026-10-10 11:54:01.171 -04:00 [ERR] HTTP GET /api/Profiles/me responded 500 in 1745.7957 ms
+Npgsql.PostgresException (0x80004005): 42P01: relation "Follows" does not exist
+
+POSITION: 126
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at UserService.Services.ProfileService.LoadAndCacheAsync(Guid userId) in C:\Users\ashut\source\repos\SocialPlatform\backend\services\user-service\UserService\Services\ProfileService.cs:line 194
+   at UserService.Services.ProfileService.GetProfileAsync(Guid userId, Guid viewerId) in C:\Users\ashut\source\repos\SocialPlatform\backend\services\user-service\UserService\Services\ProfileService.cs:line 36
+   at lambda_method72(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "Follows" does not exist
+    Position: 126
+    File: parse_relation.c
+    Line: 1449
+    Routine: parserOpenTable
+2026-10-10 11:54:01.239 -04:00 [ERR] An unhandled exception has occurred while executing the request.
+Npgsql.PostgresException (0x80004005): 42P01: relation "Follows" does not exist
+
+POSITION: 126
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at UserService.Services.ProfileService.LoadAndCacheAsync(Guid userId) in C:\Users\ashut\source\repos\SocialPlatform\backend\services\user-service\UserService\Services\ProfileService.cs:line 194
+   at UserService.Services.ProfileService.GetProfileAsync(Guid userId, Guid viewerId) in C:\Users\ashut\source\repos\SocialPlatform\backend\services\user-service\UserService\Services\ProfileService.cs:line 36
+   at lambda_method72(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "Follows" does not exist
+    Position: 126
+    File: parse_relation.c
+    Line: 1449
+    Routine: parserOpenTable
+2026-10-10 11:54:01.282 -04:00 [ERR] Unhandled Exception on /api/Profiles/me
+Npgsql.PostgresException (0x80004005): 42P01: relation "Follows" does not exist
+
+POSITION: 126
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at UserService.Services.ProfileService.LoadAndCacheAsync(Guid userId) in C:\Users\ashut\source\repos\SocialPlatform\backend\services\user-service\UserService\Services\ProfileService.cs:line 194
+   at UserService.Services.ProfileService.GetProfileAsync(Guid userId, Guid viewerId) in C:\Users\ashut\source\repos\SocialPlatform\backend\services\user-service\UserService\Services\ProfileService.cs:line 36
+   at lambda_method72(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "Follows" does not exist
+    Position: 126
+    File: parse_relation.c
+    Line: 1449
+    Routine: parserOpenTable
+2026-10-10 11:58:40.256 -04:00 [INF] Profile cache MISS for "1779ced9-ec08-4341-bc1d-d78775fd4596", loading from database
+2026-10-10 11:58:40.418 -04:00 [INF] HTTP GET /api/Profiles/me responded 200 in 249.6241 ms
+2026-10-10 12:03:32.652 -04:00 [WRN] Redis read failed for "1779ced9-ec08-4341-bc1d-d78775fd4596", using database
+StackExchange.Redis.RedisConnectionException: The message timed out in the backlog attempting to send because no connection became available (2000ms) - Last Connection Exception: It was not possible to connect to the redis server(s). ConnectTimeout, command=HMGET, timeout: 2000, inst: 0, qu: 0, qs: 0, aw: False, bw: CheckingForTimeout, rs: NotStarted, ws: Initializing, in: 0, last-in: 0, cur-in: 0, sync-ops: 2, async-ops: 4, serverEndpoint: localhost:6379, conn-sec: n/a, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: MSI(SE.Redis-v2.7.27.49176), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=0,Free=32767,Min=16,Max=32767), POOL: (Threads=6,QueuedItems=0,CompletedItems=1623,Timers=4), v: 2.7.27.49176 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+ ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). ConnectTimeout
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.GetAndRefreshAsync(String key, Boolean getData, CancellationToken token)
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.GetAsync(String key, CancellationToken token)
+   at Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions.GetStringAsync(IDistributedCache cache, String key, CancellationToken token)
+   at UserService.Services.ProfileService.GetCachedAsync(Guid userId) in C:\Users\ashut\source\repos\SocialPlatform\backend\services\user-service\UserService\Services\ProfileService.cs:line 226
+2026-10-10 12:03:32.671 -04:00 [INF] Profile cache MISS for "1779ced9-ec08-4341-bc1d-d78775fd4596", loading from database
+2026-10-10 12:03:35.572 -04:00 [WRN] Redis write failed for "1779ced9-ec08-4341-bc1d-d78775fd4596"
+StackExchange.Redis.RedisConnectionException: The message timed out in the backlog attempting to send because no connection became available (2000ms) - Last Connection Exception: It was not possible to connect to the redis server(s). ConnectTimeout, command=EVAL, timeout: 2000, inst: 0, qu: 0, qs: 0, aw: False, bw: CheckingForTimeout, last-in: 0, cur-in: 0, sync-ops: 2, async-ops: 5, serverEndpoint: localhost:6379, conn-sec: n/a, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: MSI(SE.Redis-v2.7.27.49176), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=2,Free=32765,Min=16,Max=32767), POOL: (Threads=6,QueuedItems=0,CompletedItems=1644,Timers=4), v: 2.7.27.49176 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+ ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). ConnectTimeout
+   --- End of inner exception stack trace ---
+   at StackExchange.Redis.RedisDatabase.ScriptEvaluateAsync(String script, RedisKey[] keys, RedisValue[] values, CommandFlags flags) in /_/src/StackExchange.Redis/RedisDatabase.cs:line 1551
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.SetAsync(String key, Byte[] value, DistributedCacheEntryOptions options, CancellationToken token)
+   at UserService.Services.ProfileService.LoadAndCacheAsync(Guid userId) in C:\Users\ashut\source\repos\SocialPlatform\backend\services\user-service\UserService\Services\ProfileService.cs:line 212
+2026-10-10 12:03:35.631 -04:00 [INF] HTTP GET /api/Profiles/me responded 200 in 5280.7240 ms
+2026-10-10 12:28:09.329 -04:00 [WRN] Failed login attempt for: Ayush@gmail.com
+2026-10-10 12:28:09.524 -04:00 [INF] HTTP POST /api/auth/login responded 401 in 232.5388 ms
+2026-10-10 12:28:16.639 -04:00 [WRN] Failed login attempt for: Ayush@gmail.com
+2026-10-10 12:28:16.747 -04:00 [INF] HTTP POST /api/auth/login responded 401 in 112.3704 ms
+2026-10-10 12:28:34.182 -04:00 [INF] HTTP POST /api/auth/login responded 200 in 123.7879 ms
+2026-10-10 12:29:51.933 -04:00 [INF] Profile cache MISS for "1779ced9-ec08-4341-bc1d-d78775fd4596", loading from database
+2026-10-10 12:29:51.968 -04:00 [INF] HTTP GET /api/profiles/1779ced9-ec08-4341-bc1d-d78775fd4596 responded 200 in 114.5243 ms
+2026-10-10 12:30:35.115 -04:00 [INF] User registered:0d0db2b1-a112-4567-b1b7-8697a4e7ebb4
+2026-10-10 12:30:35.164 -04:00 [INF] HTTP POST /api/auth/register responded 201 in 733.7673 ms
+2026-10-10 12:30:35.664 -04:00 [INF] HTTP POST /api/auth/login responded 200 in 313.5687 ms
+2026-10-10 12:30:39.179 -04:00 [INF] Profile cache MISS for "0d0db2b1-a112-4567-b1b7-8697a4e7ebb4", loading from database
+2026-10-10 12:30:39.197 -04:00 [INF] HTTP GET /api/profiles/0d0db2b1-a112-4567-b1b7-8697a4e7ebb4 responded 200 in 27.0090 ms
+2026-10-10 12:30:47.255 -04:00 [INF] HTTP GET /api/profiles/0d0db2b1-a112-4567-b1b7-8697a4e7ebb4/following responded 200 in 257.6860 ms
+2026-10-10 12:30:48.966 -04:00 [INF] Profile cache HIT for "0d0db2b1-a112-4567-b1b7-8697a4e7ebb4"
+2026-10-10 12:30:48.988 -04:00 [INF] HTTP GET /api/profiles/0d0db2b1-a112-4567-b1b7-8697a4e7ebb4 responded 200 in 29.7606 ms
+2026-10-10 12:30:54.166 -04:00 [INF] Profile cache HIT for "1779ced9-ec08-4341-bc1d-d78775fd4596"
+2026-10-10 12:30:54.206 -04:00 [INF] HTTP GET /api/profiles/1779ced9-ec08-4341-bc1d-d78775fd4596 responded 200 in 60.9420 ms
+2026-10-10 12:30:56.285 -04:00 [INF] "0d0db2b1-a112-4567-b1b7-8697a4e7ebb4" followed "1779ced9-ec08-4341-bc1d-d78775fd4596"
+2026-10-10 12:30:56.301 -04:00 [INF] HTTP POST /api/profiles/1779ced9-ec08-4341-bc1d-d78775fd4596/follow responded 204 in 93.6558 ms
+2026-10-10 12:30:59.349 -04:00 [INF] Profile cache MISS for "0d0db2b1-a112-4567-b1b7-8697a4e7ebb4", loading from database
+2026-10-10 12:30:59.374 -04:00 [INF] HTTP GET /api/profiles/0d0db2b1-a112-4567-b1b7-8697a4e7ebb4 responded 200 in 40.9749 ms
+2026-10-10 12:32:36.625 -04:00 [INF] User registered:1e3e1b7d-caa3-4442-a98a-f9b6af3f5daa
+2026-10-10 12:32:36.656 -04:00 [INF] HTTP POST /api/auth/register responded 201 in 368.3773 ms
+2026-10-10 12:32:37.202 -04:00 [INF] HTTP POST /api/auth/login responded 200 in 361.9911 ms
+2026-10-10 12:40:24.761 -04:00 [INF] Profile cache MISS for "1779ced9-ec08-4341-bc1d-d78775fd4596", loading from database
+2026-10-10 12:40:24.811 -04:00 [INF] HTTP GET /api/profiles/1779ced9-ec08-4341-bc1d-d78775fd4596 responded 200 in 62.8280 ms
+2026-10-10 12:40:28.855 -04:00 [INF] "1e3e1b7d-caa3-4442-a98a-f9b6af3f5daa" followed "1779ced9-ec08-4341-bc1d-d78775fd4596"
+2026-10-10 12:40:28.859 -04:00 [INF] HTTP POST /api/profiles/1779ced9-ec08-4341-bc1d-d78775fd4596/follow responded 204 in 20.7654 ms
+2026-10-10 12:40:33.840 -04:00 [INF] Profile cache HIT for "0d0db2b1-a112-4567-b1b7-8697a4e7ebb4"
+2026-10-10 12:40:33.857 -04:00 [INF] HTTP GET /api/profiles/0d0db2b1-a112-4567-b1b7-8697a4e7ebb4 responded 200 in 27.5992 ms
+2026-10-10 12:40:34.746 -04:00 [INF] "1e3e1b7d-caa3-4442-a98a-f9b6af3f5daa" followed "0d0db2b1-a112-4567-b1b7-8697a4e7ebb4"
+2026-10-10 12:40:34.750 -04:00 [INF] HTTP POST /api/profiles/0d0db2b1-a112-4567-b1b7-8697a4e7ebb4/follow responded 204 in 19.8030 ms
+2026-10-10 12:40:42.962 -04:00 [INF] Profile cache MISS for "1e3e1b7d-caa3-4442-a98a-f9b6af3f5daa", loading from database
+2026-10-10 12:40:42.997 -04:00 [INF] HTTP GET /api/profiles/1e3e1b7d-caa3-4442-a98a-f9b6af3f5daa responded 200 in 48.7429 ms
+2026-10-10 12:41:05.714 -04:00 [INF] Profile cache MISS for "1e3e1b7d-caa3-4442-a98a-f9b6af3f5daa", loading from database
+2026-10-10 12:41:05.724 -04:00 [INF] HTTP PUT /api/profiles/me responded 200 in 109.5373 ms
+2026-10-10 12:41:26.476 -04:00 [INF] HTTP POST /api/auth/login responded 200 in 279.9470 ms
+2026-10-10 12:41:29.034 -04:00 [INF] Profile cache MISS for "0d0db2b1-a112-4567-b1b7-8697a4e7ebb4", loading from database
+2026-10-10 12:41:29.050 -04:00 [INF] HTTP GET /api/profiles/0d0db2b1-a112-4567-b1b7-8697a4e7ebb4 responded 200 in 21.7247 ms
+2026-10-10 12:41:33.180 -04:00 [INF] Profile cache MISS for "0d0db2b1-a112-4567-b1b7-8697a4e7ebb4", loading from database
+2026-10-10 12:41:33.192 -04:00 [INF] HTTP PUT /api/profiles/me responded 200 in 61.1685 ms
+2026-10-10 12:41:48.624 -04:00 [INF] HTTP POST /api/auth/login responded 200 in 499.0359 ms
+2026-10-10 12:42:11.701 -04:00 [INF] Profile cache MISS for "1779ced9-ec08-4341-bc1d-d78775fd4596", loading from database
+2026-10-10 12:42:11.715 -04:00 [INF] HTTP GET /api/profiles/1779ced9-ec08-4341-bc1d-d78775fd4596 responded 200 in 25.9698 ms
+2026-10-10 12:42:46.558 -04:00 [INF] Profile cache MISS for "1779ced9-ec08-4341-bc1d-d78775fd4596", loading from database
+2026-10-10 12:42:46.563 -04:00 [INF] HTTP PUT /api/profiles/me responded 200 in 21.5163 ms
+2026-10-10 12:43:05.825 -04:00 [INF] HTTP GET /api/profiles/search responded 200 in 72.8900 ms
+2026-10-10 12:43:07.952 -04:00 [INF] Profile cache HIT for "0d0db2b1-a112-4567-b1b7-8697a4e7ebb4"
+2026-10-10 12:43:07.967 -04:00 [INF] HTTP GET /api/profiles/0d0db2b1-a112-4567-b1b7-8697a4e7ebb4 responded 200 in 21.0482 ms
+2026-10-10 12:43:10.339 -04:00 [INF] "1779ced9-ec08-4341-bc1d-d78775fd4596" followed "0d0db2b1-a112-4567-b1b7-8697a4e7ebb4"
+2026-10-10 12:43:10.342 -04:00 [INF] HTTP POST /api/profiles/0d0db2b1-a112-4567-b1b7-8697a4e7ebb4/follow responded 204 in 18.7205 ms
+2026-10-10 12:44:48.340 -04:00 [INF] User registered:f8913d61-dd81-4ee6-b657-420b1081a82e
+2026-10-10 12:44:48.345 -04:00 [INF] HTTP POST /api/auth/register responded 201 in 404.2209 ms
+2026-10-10 12:44:48.830 -04:00 [INF] HTTP POST /api/auth/login responded 200 in 394.2579 ms
+2026-10-10 12:44:59.395 -04:00 [INF] Profile cache MISS for "f8913d61-dd81-4ee6-b657-420b1081a82e", loading from database
+2026-10-10 12:44:59.406 -04:00 [INF] HTTP GET /api/profiles/f8913d61-dd81-4ee6-b657-420b1081a82e responded 200 in 14.7050 ms
+2026-10-10 12:47:03.856 -04:00 [INF] Profile cache MISS for "f8913d61-dd81-4ee6-b657-420b1081a82e", loading from database
+2026-10-10 12:47:03.867 -04:00 [INF] HTTP PUT /api/profiles/me responded 200 in 58.9842 ms
+2026-10-10 12:48:44.675 -04:00 [INF] Profile cache HIT for "f8913d61-dd81-4ee6-b657-420b1081a82e"
+2026-10-10 12:48:44.687 -04:00 [INF] HTTP GET /api/profiles/f8913d61-dd81-4ee6-b657-420b1081a82e responded 200 in 38.4295 ms
+2026-10-10 12:49:20.231 -04:00 [INF] HTTP POST /api/auth/login responded 200 in 291.6261 ms
+2026-10-10 12:52:19.888 -04:00 [INF] Profile cache HIT for "1e3e1b7d-caa3-4442-a98a-f9b6af3f5daa"
+2026-10-10 12:52:19.903 -04:00 [INF] HTTP GET /api/profiles/1e3e1b7d-caa3-4442-a98a-f9b6af3f5daa responded 200 in 27.4989 ms
+2026-10-10 12:52:49.620 -04:00 [INF] Profile cache MISS for "1779ced9-ec08-4341-bc1d-d78775fd4596", loading from database
+2026-10-10 12:52:49.661 -04:00 [INF] HTTP GET /api/profiles/1779ced9-ec08-4341-bc1d-d78775fd4596 responded 200 in 44.7888 ms
+2026-10-10 12:52:54.903 -04:00 [INF] Profile cache HIT for "f8913d61-dd81-4ee6-b657-420b1081a82e"
+2026-10-10 12:52:54.913 -04:00 [INF] HTTP GET /api/profiles/f8913d61-dd81-4ee6-b657-420b1081a82e responded 200 in 14.8116 ms
+2026-10-10 12:53:01.026 -04:00 [INF] Profile cache MISS for "0d0db2b1-a112-4567-b1b7-8697a4e7ebb4", loading from database
+2026-10-10 12:53:01.048 -04:00 [INF] HTTP GET /api/profiles/0d0db2b1-a112-4567-b1b7-8697a4e7ebb4 responded 200 in 25.3512 ms
+2026-10-10 12:59:26.565 -04:00 [INF] Profile cache HIT for "0d0db2b1-a112-4567-b1b7-8697a4e7ebb4"
+2026-10-10 12:59:26.607 -04:00 [INF] HTTP GET /api/profiles/0d0db2b1-a112-4567-b1b7-8697a4e7ebb4 responded 200 in 45.4458 ms
+2026-10-10 12:59:44.266 -04:00 [INF] Profile cache HIT for "f8913d61-dd81-4ee6-b657-420b1081a82e"
+2026-10-10 12:59:44.280 -04:00 [INF] HTTP GET /api/profiles/f8913d61-dd81-4ee6-b657-420b1081a82e responded 200 in 23.0730 ms
+2026-10-10 12:59:50.754 -04:00 [INF] Profile cache HIT for "1779ced9-ec08-4341-bc1d-d78775fd4596"
+2026-10-10 12:59:50.760 -04:00 [INF] HTTP GET /api/profiles/1779ced9-ec08-4341-bc1d-d78775fd4596 responded 200 in 12.7731 ms
+2026-10-10 12:59:55.143 -04:00 [INF] Profile cache HIT for "1e3e1b7d-caa3-4442-a98a-f9b6af3f5daa"
+2026-10-10 12:59:55.145 -04:00 [INF] HTTP GET /api/profiles/1e3e1b7d-caa3-4442-a98a-f9b6af3f5daa responded 200 in 6.0262 ms
+2026-10-10 13:00:25.165 -04:00 [INF] User registered:ac1e3c78-a76d-42d3-85c1-83a890bbb27d
+2026-10-10 13:00:25.169 -04:00 [INF] HTTP POST /api/auth/register responded 201 in 310.9365 ms
+2026-10-10 13:00:25.805 -04:00 [INF] HTTP POST /api/auth/login responded 200 in 400.1551 ms
+2026-10-10 13:00:28.484 -04:00 [INF] Profile cache MISS for "ac1e3c78-a76d-42d3-85c1-83a890bbb27d", loading from database
+2026-10-10 13:00:28.512 -04:00 [INF] HTTP GET /api/profiles/ac1e3c78-a76d-42d3-85c1-83a890bbb27d responded 200 in 33.6252 ms
+2026-10-10 13:01:51.103 -04:00 [INF] Profile cache MISS for "ac1e3c78-a76d-42d3-85c1-83a890bbb27d", loading from database
+2026-10-10 13:01:51.119 -04:00 [INF] HTTP PUT /api/profiles/me responded 200 in 70.0579 ms
+2026-10-10 13:02:50.898 -04:00 [INF] Profile cache HIT for "f8913d61-dd81-4ee6-b657-420b1081a82e"
+2026-10-10 13:02:50.904 -04:00 [INF] HTTP GET /api/profiles/f8913d61-dd81-4ee6-b657-420b1081a82e responded 200 in 25.5303 ms
+2026-10-10 13:02:52.328 -04:00 [INF] "ac1e3c78-a76d-42d3-85c1-83a890bbb27d" followed "f8913d61-dd81-4ee6-b657-420b1081a82e"
+2026-10-10 13:02:52.335 -04:00 [INF] HTTP POST /api/profiles/f8913d61-dd81-4ee6-b657-420b1081a82e/follow responded 204 in 19.3529 ms
+2026-10-10 13:02:59.695 -04:00 [INF] HTTP GET /api/profiles/f8913d61-dd81-4ee6-b657-420b1081a82e/followers responded 200 in 60.0285 ms
+2026-10-10 13:03:00.933 -04:00 [INF] Profile cache MISS for "f8913d61-dd81-4ee6-b657-420b1081a82e", loading from database
+2026-10-10 13:03:01.001 -04:00 [INF] HTTP GET /api/profiles/f8913d61-dd81-4ee6-b657-420b1081a82e responded 200 in 92.5641 ms
+2026-10-10 13:03:02.175 -04:00 [INF] HTTP GET /api/profiles/f8913d61-dd81-4ee6-b657-420b1081a82e/following responded 200 in 13.9054 ms
+2026-10-10 13:03:02.970 -04:00 [INF] Profile cache HIT for "f8913d61-dd81-4ee6-b657-420b1081a82e"
+2026-10-10 13:03:02.996 -04:00 [INF] HTTP GET /api/profiles/f8913d61-dd81-4ee6-b657-420b1081a82e responded 200 in 32.8395 ms

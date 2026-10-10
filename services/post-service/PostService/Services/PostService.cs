@@ -21,75 +21,75 @@ namespace PostService.Services
             {
                 Id = Guid.NewGuid(),
                 AuthorId = userId,
-                Content = dto.Content,
+                AuthorUsername = username,
+                Content = dto.Content.Trim(),
                 CreatedAt = DateTime.UtcNow
             };
 
             _context.Posts.Add(post);
             await _context.SaveChangesAsync();
 
-            _logger.LogInformation($"Post created: {post.Id}");
-
-            return new PostResponseDto
-            {
-                Id = post.Id,
-                AuthorId = post.AuthorId,
-                AuthorUsername = username,
-                Content = post.Content,
-                CreatedAt = post.CreatedAt,
-                LikeCount = post.LikeCount,
-                CommentCount = post.CommentCount
-            };
+            _logger.LogInformation("Post {PostId} created by {Username}", post.Id, username);
+            return Map(post);
         }
 
-        public async Task<PagedResult<PostResponseDto>> GetFeedAsync(int pageNumber = 1, int pageSize = 10)
-        {
-            var totalCount = await _context.Posts
-                .Where(p => !p.IsDeleted)
-                .CountAsync();
+        public Task<PagedResult<PostResponseDto>> GetFeedAsync(int pageNumber, int pageSize) =>
+            PageAsync(_context.Posts.Where(p => !p.IsDeleted), pageNumber, pageSize);
 
-            var posts = await _context.Posts
-                .Where(p => !p.IsDeleted)
+        public Task<PagedResult<PostResponseDto>> GetUserPostsAsync(Guid userId, int pageNumber, int pageSize) =>
+            PageAsync(_context.Posts.Where(p => p.AuthorId == userId && !p.IsDeleted), pageNumber, pageSize);
+
+        public async Task<PostResponseDto> GetPostAsync(Guid postId)
+        {
+            var post = await _context.Posts.FirstOrDefaultAsync(p => p.Id == postId && !p.IsDeleted)
+                ?? throw new KeyNotFoundException("Post not found");
+            return Map(post);
+        }
+
+        public async Task DeletePostAsync(Guid postId, Guid userId)
+        {
+            var post = await _context.Posts.FirstOrDefaultAsync(p => p.Id == postId && !p.IsDeleted)
+                ?? throw new KeyNotFoundException("Post not found");
+
+            if (post.AuthorId != userId)
+                throw new UnauthorizedAccessException("You can only delete your own posts");
+
+            post.IsDeleted = true;   // soft delete: the row stays for auditing
+            await _context.SaveChangesAsync();
+
+            _logger.LogInformation("Post {PostId} deleted by {UserId}", postId, userId);
+        }
+
+        private static async Task<PagedResult<PostResponseDto>> PageAsync(IQueryable<Post> query, int pageNumber, int pageSize)
+        {
+            pageNumber = Math.Max(1, pageNumber);
+            pageSize = Math.Clamp(pageSize, 1, 50);
+
+            var total = await query.CountAsync();
+            var posts = await query
                 .OrderByDescending(p => p.CreatedAt)
                 .Skip((pageNumber - 1) * pageSize)
                 .Take(pageSize)
                 .ToListAsync();
 
-            var items = posts.Select(p => new PostResponseDto
-            {
-                Id = p.Id,
-                AuthorId = p.AuthorId,
-                Content = p.Content,
-                CreatedAt = p.CreatedAt,
-                LikeCount = p.LikeCount,
-                CommentCount = p.CommentCount
-            }).ToList();
-
             return new PagedResult<PostResponseDto>
             {
-                Items = items,
-                TotalCount = totalCount,
+                Items = posts.Select(Map).ToList(),
+                TotalCount = total,
                 PageNumber = pageNumber,
                 PageSize = pageSize
             };
         }
 
-        public async Task<PostResponseDto> GetPostAsync(Guid postId)
+        private static PostResponseDto Map(Post p) => new()
         {
-            var post = await _context.Posts.FirstOrDefaultAsync(p => p.Id == postId && !p.IsDeleted);
-
-            if (post == null)
-                throw new KeyNotFoundException("Post not found");
-
-            return new PostResponseDto
-            {
-                Id = post.Id,
-                AuthorId = post.AuthorId,
-                Content = post.Content,
-                CreatedAt = post.CreatedAt,
-                LikeCount = post.LikeCount,
-                CommentCount = post.CommentCount
-            };
-        }
+            Id = p.Id,
+            AuthorId = p.AuthorId,
+            AuthorUsername = p.AuthorUsername,
+            Content = p.Content,
+            CreatedAt = p.CreatedAt,
+            LikeCount = p.LikeCount,
+            CommentCount = p.CommentCount
+        };
     }
 }

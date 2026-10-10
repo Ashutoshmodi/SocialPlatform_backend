@@ -1,7 +1,11 @@
-﻿namespace PostService.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace PostService.Models
 {
     public class CreatePostDto
     {
-        public string Content { get; set; }
+        [Required(ErrorMessage = "Post can't be empty")]
+        [MaxLength(500, ErrorMessage = "Post can be at most 500 characters")]
+        public string Content { get; set; } = "";
     }
 }

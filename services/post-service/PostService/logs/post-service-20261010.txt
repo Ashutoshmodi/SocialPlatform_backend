@@ -1,0 +1,86 @@
+2026-10-10 11:47:07.734 -04:00 [INF] Post Service starting...
+2026-10-10 11:50:10.254 -04:00 [INF] Post Service starting...
+2026-10-10 11:50:12.119 -04:00 [INF] HTTP POST /api/posts responded 401 in 391.4585 ms
+2026-10-10 11:50:12.236 -04:00 [INF] HTTP GET /api/posts/user/ responded 404 in 2.2009 ms
+2026-10-10 11:50:12.304 -04:00 [INF] HTTP DELETE /api/posts/ responded 405 in 0.8696 ms
+2026-10-10 11:50:12.371 -04:00 [INF] HTTP POST /api/posts responded 401 in 5.5115 ms
+2026-10-10 11:50:12.465 -04:00 [INF] HTTP DELETE /api/posts/ responded 405 in 0.1675 ms
+2026-10-10 11:53:39.619 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 1469.1313 ms
+2026-10-10 12:28:34.621 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 118.6813 ms
+2026-10-10 12:28:42.025 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 8.6617 ms
+2026-10-10 12:29:46.404 -04:00 [INF] Post "84baff96-ccc8-4073-9707-3672800b1643" created by Ayush
+2026-10-10 12:29:46.467 -04:00 [INF] HTTP POST /api/posts responded 201 in 451.4103 ms
+2026-10-10 12:29:46.704 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 14.3700 ms
+2026-10-10 12:29:51.928 -04:00 [INF] HTTP GET /api/posts/user/1779ced9-ec08-4341-bc1d-d78775fd4596 responded 200 in 74.4133 ms
+2026-10-10 12:30:05.224 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 8.1242 ms
+2026-10-10 12:30:35.788 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 34.7890 ms
+2026-10-10 12:30:39.234 -04:00 [INF] HTTP GET /api/posts/user/0d0db2b1-a112-4567-b1b7-8697a4e7ebb4 responded 200 in 30.7619 ms
+2026-10-10 12:30:48.967 -04:00 [INF] HTTP GET /api/posts/user/0d0db2b1-a112-4567-b1b7-8697a4e7ebb4 responded 200 in 10.1396 ms
+2026-10-10 12:30:51.434 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 11.0654 ms
+2026-10-10 12:30:54.173 -04:00 [INF] HTTP GET /api/posts/user/1779ced9-ec08-4341-bc1d-d78775fd4596 responded 200 in 32.6588 ms
+2026-10-10 12:30:59.349 -04:00 [INF] HTTP GET /api/posts/user/0d0db2b1-a112-4567-b1b7-8697a4e7ebb4 responded 200 in 17.9068 ms
+2026-10-10 12:31:03.248 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 18.7771 ms
+2026-10-10 12:32:07.806 -04:00 [INF] Post "0dd84317-c0c4-4315-91f3-451fc7b40ac8" created by Payal
+2026-10-10 12:32:07.816 -04:00 [INF] HTTP POST /api/posts responded 201 in 28.2824 ms
+2026-10-10 12:32:08.023 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 16.9734 ms
+2026-10-10 12:32:37.370 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 69.2442 ms
+2026-10-10 12:34:07.691 -04:00 [INF] Post "4739c1bb-055f-4b2b-bb46-af61c926d4ad" created by Ishan
+2026-10-10 12:34:07.693 -04:00 [INF] HTTP POST /api/posts responded 201 in 72.9247 ms
+2026-10-10 12:34:07.857 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 6.6844 ms
+2026-10-10 12:38:44.106 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 77.2300 ms
+2026-10-10 12:40:24.832 -04:00 [INF] HTTP GET /api/posts/user/1779ced9-ec08-4341-bc1d-d78775fd4596 responded 200 in 41.6208 ms
+2026-10-10 12:40:30.643 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 7.2653 ms
+2026-10-10 12:40:33.848 -04:00 [INF] HTTP GET /api/posts/user/0d0db2b1-a112-4567-b1b7-8697a4e7ebb4 responded 200 in 11.3924 ms
+2026-10-10 12:40:35.754 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 27.6197 ms
+2026-10-10 12:40:42.921 -04:00 [INF] HTTP GET /api/posts/user/1e3e1b7d-caa3-4442-a98a-f9b6af3f5daa responded 200 in 11.7813 ms
+2026-10-10 12:41:26.655 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 54.4913 ms
+2026-10-10 12:41:29.053 -04:00 [INF] HTTP GET /api/posts/user/0d0db2b1-a112-4567-b1b7-8697a4e7ebb4 responded 200 in 14.9780 ms
+2026-10-10 12:41:35.456 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 10.6702 ms
+2026-10-10 12:41:48.721 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 7.2667 ms
+2026-10-10 12:42:09.963 -04:00 [INF] Post "a18c7895-408c-4867-8ea4-1feb9c7374e1" created by Ayush
+2026-10-10 12:42:09.983 -04:00 [INF] HTTP POST /api/posts responded 201 in 28.3042 ms
+2026-10-10 12:42:10.248 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 18.6956 ms
+2026-10-10 12:42:11.706 -04:00 [INF] HTTP GET /api/posts/user/1779ced9-ec08-4341-bc1d-d78775fd4596 responded 200 in 18.8400 ms
+2026-10-10 12:43:07.957 -04:00 [INF] HTTP GET /api/posts/user/0d0db2b1-a112-4567-b1b7-8697a4e7ebb4 responded 200 in 16.1383 ms
+2026-10-10 12:43:11.648 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 5.7330 ms
+2026-10-10 12:43:32.847 -04:00 [INF] Post "83aec40d-17b2-4c4e-955f-d21e2680cb9f" deleted by "1779ced9-ec08-4341-bc1d-d78775fd4596"
+2026-10-10 12:43:32.851 -04:00 [INF] HTTP DELETE /api/posts/83aec40d-17b2-4c4e-955f-d21e2680cb9f responded 204 in 62.9355 ms
+2026-10-10 12:43:33.133 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 7.8998 ms
+2026-10-10 12:44:48.983 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 14.8368 ms
+2026-10-10 12:44:59.401 -04:00 [INF] HTTP GET /api/posts/user/f8913d61-dd81-4ee6-b657-420b1081a82e responded 200 in 8.3017 ms
+2026-10-10 12:47:08.649 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 66.9457 ms
+2026-10-10 12:47:25.811 -04:00 [INF] Post "6457c644-77a2-44f4-ac14-0fb1c347f13a" created by Vishant
+2026-10-10 12:47:25.820 -04:00 [INF] HTTP POST /api/posts responded 201 in 25.6507 ms
+2026-10-10 12:47:26.133 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 18.1370 ms
+2026-10-10 12:48:17.391 -04:00 [INF] Post "dd46e892-fa29-400a-8c6e-2bdddc0c54fd" created by Vishant
+2026-10-10 12:48:17.409 -04:00 [INF] HTTP POST /api/posts responded 201 in 34.1951 ms
+2026-10-10 12:48:17.554 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 7.5747 ms
+2026-10-10 12:48:44.655 -04:00 [INF] HTTP GET /api/posts/user/f8913d61-dd81-4ee6-b657-420b1081a82e responded 200 in 19.3342 ms
+2026-10-10 12:48:51.159 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 7.6189 ms
+2026-10-10 12:49:20.519 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 63.5204 ms
+2026-10-10 12:52:19.922 -04:00 [INF] HTTP GET /api/posts/user/1e3e1b7d-caa3-4442-a98a-f9b6af3f5daa responded 200 in 45.5254 ms
+2026-10-10 12:52:46.204 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 23.9168 ms
+2026-10-10 12:52:49.651 -04:00 [INF] HTTP GET /api/posts/user/1779ced9-ec08-4341-bc1d-d78775fd4596 responded 200 in 13.8591 ms
+2026-10-10 12:52:53.339 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 10.5844 ms
+2026-10-10 12:52:54.910 -04:00 [INF] HTTP GET /api/posts/user/f8913d61-dd81-4ee6-b657-420b1081a82e responded 200 in 11.0138 ms
+2026-10-10 12:52:58.198 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 8.3509 ms
+2026-10-10 12:53:01.051 -04:00 [INF] HTTP GET /api/posts/user/0d0db2b1-a112-4567-b1b7-8697a4e7ebb4 responded 200 in 10.0882 ms
+2026-10-10 12:53:10.152 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 10.4132 ms
+2026-10-10 12:59:26.623 -04:00 [INF] HTTP GET /api/posts/user/0d0db2b1-a112-4567-b1b7-8697a4e7ebb4 responded 200 in 36.7464 ms
+2026-10-10 12:59:37.692 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 13.9673 ms
+2026-10-10 12:59:44.282 -04:00 [INF] HTTP GET /api/posts/user/f8913d61-dd81-4ee6-b657-420b1081a82e responded 200 in 9.4424 ms
+2026-10-10 12:59:47.609 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 11.7913 ms
+2026-10-10 12:59:50.751 -04:00 [INF] HTTP GET /api/posts/user/1779ced9-ec08-4341-bc1d-d78775fd4596 responded 200 in 23.9921 ms
+2026-10-10 12:59:52.956 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 12.1303 ms
+2026-10-10 12:59:55.162 -04:00 [INF] HTTP GET /api/posts/user/1e3e1b7d-caa3-4442-a98a-f9b6af3f5daa responded 200 in 13.4102 ms
+2026-10-10 12:59:58.847 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 15.4322 ms
+2026-10-10 13:00:25.966 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 14.5037 ms
+2026-10-10 13:00:28.523 -04:00 [INF] HTTP GET /api/posts/user/ac1e3c78-a76d-42d3-85c1-83a890bbb27d responded 200 in 22.2833 ms
+2026-10-10 13:01:54.750 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 25.7440 ms
+2026-10-10 13:02:41.859 -04:00 [INF] Post "7261e5ee-8cc5-4718-b3ea-c36e1b688a51" created by Deepa
+2026-10-10 13:02:41.871 -04:00 [INF] HTTP POST /api/posts responded 201 in 35.9929 ms
+2026-10-10 13:02:42.183 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 35.0982 ms
+2026-10-10 13:02:50.887 -04:00 [INF] HTTP GET /api/posts/user/f8913d61-dd81-4ee6-b657-420b1081a82e responded 200 in 18.4900 ms
+2026-10-10 13:03:00.921 -04:00 [INF] HTTP GET /api/posts/user/f8913d61-dd81-4ee6-b657-420b1081a82e responded 200 in 16.2077 ms
+2026-10-10 13:03:02.970 -04:00 [INF] HTTP GET /api/posts/user/f8913d61-dd81-4ee6-b657-420b1081a82e responded 200 in 3.8601 ms
+2026-10-10 13:03:06.382 -04:00 [INF] HTTP GET /api/posts/feed responded 200 in 12.1540 ms
