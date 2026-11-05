@@ -11,5 +11,6 @@ namespace UserService.Services
         Task<PagedResult<UserSummaryDto>> GetFollowersAsync(Guid userId, int pageNumber, int pageSize);
         Task<PagedResult<UserSummaryDto>> GetFollowingAsync(Guid userId, int pageNumber, int pageSize);
         Task<List<UserSummaryDto>> SearchAsync(string? query, int limit);
+        Task<List<Guid>> GetFollowingIdsAsync(Guid userId);
     }
 }

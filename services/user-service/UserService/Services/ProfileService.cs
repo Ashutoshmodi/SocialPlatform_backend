@@ -27,6 +27,8 @@ namespace UserService.Services
         }
 
         private static string CacheKey(Guid userId) => $"profile:{userId}";
+        private static string FollowingKey(Guid userId) => $"following:{userId}";
+
 
         // ---------- Profiles ----------
 
@@ -243,6 +245,7 @@ namespace UserService.Services
                 try
                 {
                     await _cache.RemoveAsync(CacheKey(id));
+                    await _cache.RemoveAsync(FollowingKey(id));
                 }
                 catch (Exception ex)
                 {
@@ -251,5 +254,41 @@ namespace UserService.Services
             }
         }
 
+        public async Task<List<Guid>> GetFollowingIdsAsync(Guid userId)
+        {
+            try
+            {
+                var json = await _cache.GetStringAsync(FollowingKey(userId));
+                if (json is not null)
+                {
+                    _logger.LogInformation("Following-ids cache HIT for {UserId}", userId);
+                    return JsonSerializer.Deserialize<List<Guid>>(json) ?? new List<Guid>();
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning(ex, "Redis read failed for following ids of {UserId}", userId);
+            }
+
+            _logger.LogInformation("Following-ids cache MISS for {UserId}", userId);
+
+            var ids = await _db.Follows
+                .Where(f => f.FollowerId == userId)
+                .OrderByDescending(f => f.CreatedAt)
+                .Select(f => f.FolloweeId)
+                .Take(100)
+                .ToListAsync();
+
+            try
+            {
+                await _cache.SetStringAsync(FollowingKey(userId), JsonSerializer.Serialize(ids), cacheOptions);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning(ex, "Redis write failed for following ids of {UserId}", userId);
+            }
+
+            return ids;
+        }
     }
 }

@@ -4,9 +4,11 @@ using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using PostService.Clients;
 using PostService.Data;
 using PostService.Services;
 using Serilog;
+using static PostService.Clients.UserServiceClient;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +27,19 @@ builder.Services.AddDbContext<PostDbContext>(options =>
 
 // ---------- App services ----------
 builder.Services.AddScoped<IPostService, PostService.Services.PostService>();
+
+
+// ---------- Service-to-service client ----------
+var internalApiKey = builder.Configuration["InternalApi:Key"]
+    ?? throw new InvalidOperationException("InternalApi:Key is missing. Set it with dotnet user-secrets (see Week 3, step A1).");
+
+builder.Services.AddHttpClient<IUserServiceClient, UserServiceClient>(client =>
+{
+    client.BaseAddress = new Uri(builder.Configuration["Services:UserService"]!);
+    client.Timeout = TimeSpan.FromSeconds(3);   // don't let a slow UserService hang the feed
+    client.DefaultRequestHeaders.Add("X-Internal-Api-Key", internalApiKey);
+});
+
 
 // ---------- JWT authentication ----------
 var jwt = builder.Configuration.GetSection("JwtSettings");
@@ -91,6 +106,7 @@ app.UseExceptionHandler(errorApp => errorApp.Run(async context =>
 
     var (status, message) = ex switch
     {
+        DependencyUnavailableException => (StatusCodes.Status503ServiceUnavailable, ex.Message),
         KeyNotFoundException => (StatusCodes.Status404NotFound, ex.Message),
         ArgumentException => (StatusCodes.Status400BadRequest, ex.Message),
         UnauthorizedAccessException => (StatusCodes.Status403Forbidden, ex.Message),

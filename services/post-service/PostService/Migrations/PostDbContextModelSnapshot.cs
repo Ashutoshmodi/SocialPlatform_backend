@@ -33,7 +33,8 @@ namespace PostService.Migrations
 
                     b.Property<string>("AuthorUsername")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
 
                     b.Property<int>("CommentCount")
                         .HasColumnType("integer");
@@ -56,13 +57,38 @@ namespace PostService.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AuthorId");
-
                     b.HasIndex("CreatedAt");
 
                     b.HasIndex("AuthorId", "CreatedAt");
 
                     b.ToTable("Posts");
+                });
+
+            modelBuilder.Entity("PostService.Models.PostLike", b =>
+                {
+                    b.Property<Guid>("PostId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("PostId", "UserId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("PostLikes");
+                });
+
+            modelBuilder.Entity("PostService.Models.PostLike", b =>
+                {
+                    b.HasOne("PostService.Models.Post", null)
+                        .WithMany()
+                        .HasForeignKey("PostId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
